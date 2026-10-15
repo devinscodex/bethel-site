@@ -1,3 +1,12 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Bethel Fellowship Church"
+disableKinds = ["rss"]
+[taxonomies]
+  speaker = "speaker"
+  series = "series"
+  books = "books"
+  topics = "topics"
+[params]
+  mediaBase = "http://localhost:8099"
+  tagline = "Preview build: placeholder layout, not the final design"
