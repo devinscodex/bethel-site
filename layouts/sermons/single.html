@@ -1,0 +1,5 @@
+{{ define "main" }}<h1>{{ .Title }}</h1>
+<div class="mut">{{ .Date.Format "January 2, 2006" }}{{ with .Params.speaker }} · {{ delimit . ", " }}{{ end }}{{ with .Params.series }} · Series: {{ delimit . ", " }}{{ end }}{{ with .Params.passage }}<br>{{ . }}{{ end }}</div>
+{{ with .Params.audio }}<audio controls preload="none" src="{{ $.Site.Params.mediaBase }}{{ replace . "/audio/" "/" }}"></audio>{{ end }}
+{{ with .Params.summary }}<p>{{ . }}</p>{{ end }}{{ .Content }}
+{{ with .Params.notes_pdf }}<p><a href="{{ $.Site.Params.mediaBase }}{{ replace . "/files/" "/" }}">Sermon notes (PDF)</a></p>{{ end }}{{ end }}
