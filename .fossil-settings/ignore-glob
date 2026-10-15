@@ -1,0 +1,9 @@
+public/
+resources/_gen/
+.hugo_build.lock
+*.env
+.env
+*.key
+*.pem
+content/**/*.wxr.xml
+static/audio/
