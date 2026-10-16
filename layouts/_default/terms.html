@@ -1,1 +1,3 @@
-{{ define "main" }}<h1>{{ .Title }}</h1><ul>{{ range .Data.Terms.Alphabetical }}<li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>{{ end }}</ul>{{ end }}
+{{ define "main" }}<h1>{{ .Title }}</h1>
+{{ $t := .Data.Terms }}{{ $terms := cond (eq .Data.Plural "speaker") $t.ByCount $t.Alphabetical }}
+<div class="grid terms">{{ range $terms }}<a class="tile" href="{{ .Page.RelPermalink }}"><b>{{ .Page.Title }}</b><span class="meta">{{ .Count }} {{ if eq .Count 1 }}sermon{{ else }}sermons{{ end }}</span></a>{{ end }}</div>{{ end }}

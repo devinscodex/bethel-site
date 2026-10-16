@@ -1,0 +1,3 @@
+{{ define "main" }}<p class="label"><a href="{{ .Parent.RelPermalink }}" style="text-decoration:none">&larr; All {{ .Data.Plural }}</a></p>
+<h1>{{ .Title }}</h1><p class="meta">{{ len .Pages }} {{ if eq (len .Pages) 1 }}sermon{{ else }}sermons{{ end }}</p>
+<section class="list">{{ $p := cond (eq .Data.Plural "series") .Pages.ByDate .Pages.ByDate.Reverse }}{{ range $p }}{{ partial "sermon-item.html" . }}{{ end }}</section>{{ end }}

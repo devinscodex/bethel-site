@@ -6,7 +6,7 @@
 {{ range $groups }}{{ $grp := . }}
 <h2 class="label" style="margin-top:36px">{{ $grp }}</h2>
 <div class="gal">{{ range $.Params.images }}{{ $it := . }}{{ if eq .group $grp }}{{ with $page.Resources.GetMatch .src }}
-{{ $t := .Fill "600x400 webp q75" }}{{ $b := .Resize "1800x webp q80" }}
+{{ $t := .Fill (printf "600x400 webp q75 %s" ($it.anchor | default "Smart")) }}{{ $b := .Resize "1800x webp q80" }}
 <a href="{{ $b.RelPermalink }}" data-full="{{ $b.RelPermalink }}" data-alt="{{ $it.alt }}"><img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="{{ $it.alt }}" loading="lazy"></a>
 {{ end }}{{ end }}{{ end }}</div>
 {{ end }}
