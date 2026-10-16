@@ -1,0 +1,31 @@
+{{- $desc := "" -}}
+{{- $sp := slice -}}{{ with .Params.speaker }}{{ $sp = . }}{{ end -}}
+{{- $ps := "" -}}{{ with .Params.passage }}{{ $ps = . }}{{ end -}}
+{{- with .Params.summary }}{{ $desc = . }}{{ else }}{{ with .Description }}{{ $desc = . }}{{ else }}
+{{- if eq .Section "sermons" }}{{ if .IsPage }}{{ $desc = printf "%s. A sermon%s%s at Bethel Fellowship Church, Fortuna, Missouri." .Title (cond (gt (len $sp) 0) (printf " by %s" (delimit $sp ", ")) "") (cond (ne $ps "") (printf " on %s" $ps) "") }}{{ end }}{{ end }}
+{{- end }}{{ end -}}
+{{- if not $desc }}{{ $desc = site.Params.description }}{{ end -}}
+{{- $desc = $desc | plainify | truncate 200 -}}
+{{- $img := "" -}}
+{{- with site.GetPage "/gallery" }}{{ with .Resources.GetMatch "homepage.jpg" }}{{ $img = (.Fill "1200x630 jpg q85").Permalink }}{{ end }}{{ end -}}
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+{{ with $img }}<meta property="og:image" content="{{ . }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ . }}">{{ end }}
+{{ if .IsHome -}}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "Church" "name" site.Title "url" site.BaseURL "description" site.Params.description "telephone" site.Params.phone "email" site.Params.email "address" (dict "@type" "PostalAddress" "streetAddress" "37830 Bethel Church Rd." "addressLocality" "Fortuna" "addressRegion" "MO" "postalCode" "65034" "addressCountry" "US") "image" $img "event" (slice (dict "@type" "Event" "name" "Sunday School" "eventSchedule" (dict "@type" "Schedule" "byDay" "https://schema.org/Sunday" "startTime" "09:30:00" "repeatFrequency" "P1W" "scheduleTimezone" "America/Chicago") "location" (dict "@type" "Place" "name" site.Title "address" site.Params.address)) (dict "@type" "Event" "name" "Worship Service" "eventSchedule" (dict "@type" "Schedule" "byDay" "https://schema.org/Sunday" "startTime" "10:30:00" "repeatFrequency" "P1W" "scheduleTimezone" "America/Chicago") "location" (dict "@type" "Place" "name" site.Title "address" site.Params.address))) | jsonify | safeJS }}</script>
+{{- end }}
+{{ if and (eq .Section "sermons") .IsPage .Params.audio -}}
+{{- $o := dict "@context" "https://schema.org" "@type" "AudioObject" "name" .Title "description" $desc "uploadDate" (.Date.Format "2006-01-02") "contentUrl" (printf "%s%s" (strings.TrimSuffix "/" site.BaseURL) (printf "%s%s" site.Params.mediaBase (replace .Params.audio "/audio/" "/")))  "publisher" (dict "@type" "Church" "name" site.Title) -}}
+{{- if gt (len $sp) 0 }}{{ $o = merge $o (dict "author" (dict "@type" "Person" "name" (index $sp 0))) }}{{ end -}}
+<script type="application/ld+json">{{ $o | jsonify | safeJS }}</script>
+{{- end }}

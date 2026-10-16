@@ -1,5 +1,6 @@
 ---
 title: "About"
+description: "About Bethel Fellowship Church, a congregation in Fortuna, Missouri."
 ---
 
 Bethel Fellowship Church, Fortuna, Missouri.

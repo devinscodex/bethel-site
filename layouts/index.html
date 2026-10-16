@@ -6,10 +6,10 @@
 <h1>{{ site.Title }}</h1>
 <a class="btn" href="/visit/">Plan your visit</a>
 </section>
-{{ with site.GetPage "/gallery" }}{{ $first := .Resources.GetMatch "homepage.jpg" }}
+{{ with site.GetPage "/gallery" }}{{ $alts := dict }}{{ range .Params.images }}{{ $alts = merge $alts (dict .src .alt) }}{{ end }}{{ $first := .Resources.GetMatch "homepage.jpg" }}
 <div class="banner" id="slides">
 {{ with $first }}{{ $i := .Fill "1400x875 webp q80" }}<img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="Bethel Fellowship Church, Fortuna, Missouri" fetchpriority="high">{{ end }}
-{{ range .Resources.Match "*.jpg" }}{{ if ne .Name "homepage.jpg" }}{{ $i := .Fill "1400x875 webp q78" }}<img data-src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="{{ .Name | strings.TrimSuffix ".jpg" | replaceRE "-" " " | title }}" hidden>{{ end }}{{ end }}
+{{ range .Resources.Match "*.jpg" }}{{ if ne .Name "homepage.jpg" }}{{ $i := .Fill "1400x875 webp q78" }}<img data-src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="{{ index $alts .Name | default (.Name | strings.TrimSuffix ".jpg" | replaceRE "-" " " | title) }}" hidden>{{ end }}{{ end }}
 </div>
 <script src="{{ (resources.Get "js/slides.js" | minify | fingerprint).RelPermalink }}" defer></script>
 {{ end }}

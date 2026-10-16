@@ -1,5 +1,6 @@
 ---
 title: "Visit"
+description: "What to expect at Bethel Fellowship Church in Fortuna, MO: Sunday School at 9:30 AM, worship at 10:30 AM, dress, children and nursery."
 ---
 
 Here’s what to expect at Bethel on a Sunday morning.
