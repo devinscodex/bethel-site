@@ -61,6 +61,7 @@ images:
   - src: pew-and-cross.jpg
     alt: "A pew end with the cross behind"
     group: "Details"
+description: "Photos of Bethel Fellowship Church in Fortuna, Missouri: the building, the grounds and the sanctuary."
 ---
 
 The building and grounds of Bethel Fellowship Church.
