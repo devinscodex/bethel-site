@@ -99,3 +99,6 @@ header .srch:hover{color:var(--green)}
 .pl button{color:var(--green);border-color:var(--rule)}
 .pl{margin-bottom:20px}
 @media(max-width:760px){main{padding:3vh 0}nav a,header .srch{padding:9px 0;display:inline-block}.pl button{height:44px;min-width:44px}}
+.hero h1{font-size:clamp(44px,9vw,96px);line-height:1.04;letter-spacing:.005em;color:var(--green);margin:.18em 0 .1em}
+.hero{padding:6vh 0 7vh}
+.hero h1{text-wrap:balance}
