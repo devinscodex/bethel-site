@@ -112,3 +112,13 @@ header .srch:hover{color:var(--green)}
 .hero h1{font-size:clamp(34px,6.6vw,72px);margin:.12em 0 .05em}.hero{padding:0 0 3vh}.hero .btn{margin-top:18px}.banner{margin-bottom:5vh}
 .hero h1{font-size:clamp(30px,5.2vw,62px);text-wrap:nowrap}@media(max-width:560px){.hero h1{text-wrap:balance;font-size:clamp(34px,10vw,48px)}}
 .pn{display:flex;justify-content:space-between;gap:24px;margin-top:48px;padding-top:20px;border-top:1px solid var(--rule)}.pn a{max-width:48%;text-decoration:none;color:var(--ink)}.pn a:hover{color:var(--green)}.pn a[rel=next]{text-align:right;margin-left:auto}
+.sermon .sticky{position:sticky;top:0;z-index:5;background:var(--bg);padding-bottom:10px;border-bottom:1px solid var(--rule)}
+.sermon .sticky .pl{margin:0;padding-top:10px}
+.cols{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;margin-top:20px}
+@media(min-width:1000px){.cols{grid-template-columns:minmax(0,42rem) minmax(260px,1fr)}.mine{position:sticky;top:96px;align-self:start}}
+.kt{padding-left:1.1em}.kt li{margin:.5em 0}
+.tx{margin-top:1.4em;border-top:1px solid var(--rule);padding-top:1em}.tx summary{cursor:pointer;font:13px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.tx h3{font-size:1.05em;margin:1.6em 0 .4em;color:var(--green)}
+.mine textarea{width:100%;box-sizing:border-box;margin-top:8px;padding:10px;font:16px/1.5 var(--serif);background:var(--panel);color:var(--ink);border:1px solid var(--rule);resize:vertical}
+.mine textarea:focus{outline:2px solid var(--green)}
+.tx{margin-bottom:1.4em}
