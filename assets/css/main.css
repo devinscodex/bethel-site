@@ -116,3 +116,4 @@ header .srch:hover{color:var(--green)}
 #slides img.s{opacity:0;transition:opacity 1.2s ease}#slides img.s.on{opacity:1}
 @media(prefers-reduced-motion:reduce){#slides img.s{transition:none}}
 #slides{width:100%;aspect-ratio:auto;max-height:none;height:clamp(240px,56vw,62vh)}
+.pn{display:flex;justify-content:space-between;gap:24px;margin-top:48px;padding-top:20px;border-top:1px solid var(--rule)}.pn a{max-width:48%;text-decoration:none;color:var(--ink)}.pn a:hover{color:var(--green)}.pn a[rel=next]{text-align:right;margin-left:auto}
