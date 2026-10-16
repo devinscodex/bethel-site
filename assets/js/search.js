@@ -1,0 +1,1 @@
+window.addEventListener("DOMContentLoaded",function(){if(window.PagefindUI)new PagefindUI({element:"#s",showSubResults:false,showImages:false,resetStyles:false,translations:{placeholder:"Search sermons and pages"}});else document.getElementById("s").textContent="Search index not built. Run tools/build.sh."})

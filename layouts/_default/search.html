@@ -1,5 +1,6 @@
 {{ define "main" }}<h1>{{ .Title }}</h1>
 <div data-pagefind-ignore><link href="/pagefind/pagefind-ui.css" rel="stylesheet"><div id="s"></div>
 <noscript><p class="meta">Search needs JavaScript. You can also browse the <a href="/sermons/">sermon list</a>.</p></noscript>
-<script src="/pagefind/pagefind-ui.js"></script>
-<script>window.addEventListener("DOMContentLoaded",function(){if(window.PagefindUI)new PagefindUI({element:"#s",showSubResults:false,showImages:false,resetStyles:false,translations:{placeholder:"Search sermons and pages"}});else document.getElementById("s").textContent="Search index not built. Run tools/build.sh."})</script></div>{{ end }}
+<script src="/pagefind/pagefind-ui.js" defer></script>
+{{ $sj := resources.Get "js/search.js" | minify | fingerprint }}<script src="{{ $sj.RelPermalink }}" defer></script>
+</div>{{ end }}
