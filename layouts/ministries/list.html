@@ -1,0 +1,2 @@
+{{ define "main" }}<h1>{{ .Title }}</h1>{{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+<div class="grid">{{ range .Pages }}<a class="tile" href="{{ .RelPermalink }}">{{ partial "cover.html" . }}<b>{{ .Title }}</b><span class="meta">{{ .Params.blurb }}</span></a>{{ end }}</div>{{ end }}

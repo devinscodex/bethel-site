@@ -1,0 +1,1 @@
+{{ with .Resources.GetMatch "cover.*" }}{{ $i := .Fill "800x500 webp q80" }}<img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="" loading="lazy">{{ end }}

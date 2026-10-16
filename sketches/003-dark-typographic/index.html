@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bethel Fellowship Church</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0e0f12;--ink:#f1ede4;--mute:#8d8a82;--gold:#c8a85a;--rule:#2a2a2d}
+body{font:18px/1.7 Georgia,"Iowan Old Style","Palatino Linotype",serif;background:var(--bg);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+.top{display:flex;justify-content:space-between;align-items:center;padding:26px 6vw}
+.mark{width:34px;height:34px;border:1px solid var(--gold);position:relative}
+.mark:before,.mark:after{content:"";position:absolute;background:var(--gold)}
+.mark:before{left:16px;top:7px;width:1px;height:20px}.mark:after{left:10px;top:13px;width:13px;height:1px}
+.menu{background:none;border:1px solid var(--rule);color:var(--ink);padding:9px 18px;font:12px sans-serif;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.menu:hover{border-color:var(--gold)}
+.overlay{position:fixed;inset:0;background:var(--bg);display:none;flex-direction:column;justify-content:center;align-items:center;gap:20px;z-index:9}
+.overlay.open{display:flex}.overlay a{font-size:34px}.overlay a:hover{color:var(--gold)}
+.overlay button{position:absolute;top:26px;right:6vw}
+.hero{min-height:74vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:6vh 6vw}
+.hero small{font:12px sans-serif;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+h1{font-weight:400;font-size:clamp(54px,11vw,140px);line-height:1;margin:22px 0 8px;letter-spacing:-.02em}
+.tag{font-style:italic;color:var(--mute);font-size:22px}
+.times{margin-top:44px;display:flex;gap:44px;flex-wrap:wrap;justify-content:center;font-size:20px}
+.times div span{display:block;font:11px sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.pill{display:inline-block;margin-top:44px;padding:14px 32px;border:1px solid var(--gold);border-radius:999px;font:12px sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);transition:.2s}
+.pill:hover{background:var(--gold);color:var(--bg)}
+.two{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule)}
+.col{padding:56px 6vw}.col+.col{border-left:1px solid var(--rule)}
+.col h2{font:400 13px sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:26px;display:flex;justify-content:space-between}
+.col h2 a{color:var(--mute);letter-spacing:.14em}.col h2 a:hover{color:var(--ink)}
+.item{padding:16px 0;border-top:1px solid var(--rule)}
+.item b{font-weight:400;font-size:23px;display:block}.item:hover b{color:var(--gold)}
+.item span{font:14px sans-serif;color:var(--mute)}
+footer{border-top:1px solid var(--rule);padding:40px 6vw;text-align:center;font:14px/1.9 sans-serif;color:var(--mute)}
+@media(max-width:760px){.two{grid-template-columns:1fr}.col+.col{border-left:0;border-top:1px solid var(--rule)}}
+</style></head><body>
+<div class="top"><div class="mark" title="Bethel"></div><button class="menu" id="o">Menu</button></div>
+<div class="overlay" id="ov"><button class="menu" id="c">Close</button><a href="#">Visit</a><a href="#">Sermons</a><a href="#">Ministries</a><a href="#">About</a><a href="#">Contact</a></div>
+<section class="hero"><small>Fortuna, Missouri</small><h1>Bethel</h1><div class="tag">Fellowship Church &mdash; the house of God</div>
+<div class="times"><div><span>Sunday School</span>9:30 AM</div><div><span>Worship Service</span>10:30 AM</div></div>
+<a class="pill" href="#">Plan your visit</a></section>
+<section class="two">
+<div class="col"><h2>Recent sermons <a href="#">All sermons</a></h2>
+<a class="item" href="#" style="display:block"><b>Freedom in Christ</b><span>Steve Grothoff &middot; Oct 11, 2026</span></a>
+<a class="item" href="#" style="display:block"><b>Our Inheritance In Christ</b><span>Steve Grothoff &middot; Oct 8, 2026</span></a>
+<a class="item" href="#" style="display:block"><b>Living Sacrifice</b><span>Steve Grothoff &middot; Sep 27, 2026</span></a></div>
+<div class="col"><h2>Life together</h2>
+<a class="item" href="#" style="display:block"><b>Sunday School</b><span>For all ages, including four adult classes</span></a>
+<a class="item" href="#" style="display:block"><b>Youth Group</b><span>Grades 7&ndash;12, Wednesdays</span></a>
+<a class="item" href="#" style="display:block"><b>Women in Mission</b><span>Quilting, fellowship and a Bible lesson</span></a></div>
+</section>
+<footer>Bethel Fellowship Church<br>37830 Bethel Church Rd., Fortuna, MO 65034 &middot; 573-378-4878</footer>
+<script>const ov=document.getElementById('ov');document.getElementById('o').onclick=()=>ov.classList.add('open');document.getElementById('c').onclick=()=>ov.classList.remove('open')</script>
+</body></html>

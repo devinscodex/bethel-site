@@ -1,0 +1,3 @@
+{{- $img := .Page.Resources.GetMatch .Destination -}}
+{{- if $img -}}{{- $s := $img.Resize "1200x webp q80" -}}<img src="{{ $s.RelPermalink }}" width="{{ $s.Width }}" height="{{ $s.Height }}" alt="{{ .PlainText }}" loading="lazy">
+{{- else -}}<img src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}" loading="lazy">{{- end -}}

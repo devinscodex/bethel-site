@@ -15,6 +15,8 @@ os.makedirs(out_dir, exist_ok=True)
 def load(n): return json.load(open(ARC + n))
 names = lambda f: {t["id"]: html.unescape(t["name"]) for t in load(f)}
 preachers = names("tax_wpfc_preacher.json")
+SPEAKER_FIX = {"Eric Loganbill": "Erik Loganbill", "Bethel Church Family": "Bethel Family"}
+preachers = {k: SPEAKER_FIX.get(v, v) for k, v in preachers.items()}
 series = names("tax_wpfc_sermon_series.json")
 books = names("tax_wpfc_bible_book.json")
 topics = names("tax_wpfc_sermon_topics.json")
@@ -42,6 +44,8 @@ for s in sermons:
     seen.add(slug)
     ts = s.get("sermon_date")
     date = datetime.fromtimestamp(ts, timezone.utc).strftime("%Y-%m-%d") if ts else s["date"][:10]
+    if not ts and re.fullmatch(r"\d{6}", slug):
+        date = datetime.strptime(slug, "%y%m%d").strftime("%Y-%m-%d")
     fm = {
         "title": html.unescape(s["title"]["rendered"]),
         "date": date,
