@@ -2,4 +2,5 @@
 <div class="meta">{{ .Date.Format "January 2, 2006" }}{{ with .GetTerms "speaker" }} &middot; {{ range $i, $e := . }}{{ if $i }}, {{ end }}<a href="{{ $e.RelPermalink }}">{{ $e.LinkTitle }}</a>{{ end }}{{ end }}{{ with .GetTerms "series" }} &middot; Series: {{ range $i, $e := . }}{{ if $i }}, {{ end }}<a href="{{ $e.RelPermalink }}">{{ $e.LinkTitle }}</a>{{ end }}{{ end }}{{ with .Params.passage }}<br>{{ . }}{{ end }}</div>
 {{ partial "player.html" . }}
 {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}{{ .Content }}
-{{ with .Params.notes_pdf }}<p><a href="{{ site.Params.mediaBase }}{{ replace . "/files/" "/" }}">Sermon notes (PDF)</a></p>{{ end }}</article>{{ end }}
+{{ with .Params.notes_pdf }}<p><a href="{{ site.Params.mediaBase }}{{ replace . "/files/" "/" }}">Sermon notes (PDF)</a></p>{{ end }}<nav class="pn">{{ with .PrevInSection }}<a href="{{ .RelPermalink }}" rel="prev"><span class="label">&larr; Older</span><br>{{ .Title }}</a>{{ else }}<span></span>{{ end }}{{ with .NextInSection }}<a href="{{ .RelPermalink }}" rel="next"><span class="label">Newer &rarr;</span><br>{{ .Title }}</a>{{ end }}</nav>
+</article>{{ end }}
