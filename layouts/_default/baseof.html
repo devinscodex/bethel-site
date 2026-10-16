@@ -1,16 +1,18 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
-<style>
-:root{--fg:#1d1d1b;--mut:#666;--bg:#fbfaf7;--ac:#7a3b1e;--card:#fff;--ln:#e5e1d8}
-@media(prefers-color-scheme:dark){:root{--fg:#ece9e2;--mut:#a8a49b;--bg:#16150f;--ac:#e0a070;--card:#201f18;--ln:#33312a}}
-body{font:18px/1.6 "PT Sans",system-ui,sans-serif;color:var(--fg);background:var(--bg);margin:0}
-header,main,footer{max-width:46rem;margin:0 auto;padding:1rem 1.2rem}
-header{display:flex;gap:1.2rem;align-items:baseline;flex-wrap:wrap;border-bottom:1px solid var(--ln)}
-header a.t{font-weight:700;font-size:1.2rem;color:var(--fg);text-decoration:none}
-a{color:var(--ac)} .mut{color:var(--mut);font-size:.9rem}
-.card{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:.8rem 1rem;margin:.7rem 0}
-.card h3{margin:.1rem 0}.card a{text-decoration:none}
-audio{width:100%;margin:1rem 0}.banner{background:var(--ac);color:#fff;padding:.4rem 1.2rem;text-align:center;font-size:.85rem}
-</style></head><body><div class="banner">{{ .Site.Params.tagline }}</div>
-<header><a class="t" href="/">{{ .Site.Title }}</a><a href="/sermons/">Sermons</a><a href="/speaker/">Speakers</a><a href="/series/">Series</a></header>
-<main>{{ block "main" . }}{{ end }}</main><footer class="mut">{{ now.Year }} Bethel Fellowship Church</footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
+{{ with .Params.summary }}<meta name="description" content="{{ . }}">{{ end }}
+<script>(function(){var m=document.cookie.match(/(?:^|; )bt=(light|dark)/);document.documentElement.dataset.theme=m?m[1]:"light"})()</script>
+{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+</head>
+<body>
+{{ partial "header.html" . }}
+<main><div class="wrap">{{ block "main" . }}{{ end }}</div></main>
+{{ partial "footer.html" . }}
+<script>document.getElementById("tg").onclick=function(){var r=document.documentElement,s=r.dataset.theme==="dark"?"light":"dark";r.dataset.theme=s;document.cookie="bt="+s+"; max-age=31536000; path=/; SameSite=Lax"}</script>
+</body>
+</html>

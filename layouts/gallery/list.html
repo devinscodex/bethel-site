@@ -1,0 +1,23 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+{{ $page := . }}
+{{ $groups := slice }}{{ range .Params.images }}{{ if not (in $groups .group) }}{{ $groups = $groups | append .group }}{{ end }}{{ end }}
+{{ range $groups }}{{ $grp := . }}
+<h2 class="label" style="margin-top:36px">{{ $grp }}</h2>
+<div class="gal">{{ range $.Params.images }}{{ $it := . }}{{ if eq .group $grp }}{{ with $page.Resources.GetMatch .src }}
+{{ $t := .Fill "600x400 webp q75" }}{{ $b := .Resize "1800x webp q80" }}
+<a href="{{ $b.RelPermalink }}" data-full="{{ $b.RelPermalink }}" data-alt="{{ $it.alt }}"><img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="{{ $it.alt }}" loading="lazy"></a>
+{{ end }}{{ end }}{{ end }}</div>
+{{ end }}
+<dialog id="lb"><button type="button" aria-label="Close">&times;</button><img alt=""><p class="meta"></p></dialog>
+<script>
+(function(){var d=document.getElementById("lb"),i=d.querySelector("img"),c=d.querySelector("p"),a=[].slice.call(document.querySelectorAll(".gal a")),n=0;
+function show(k){n=(k+a.length)%a.length;i.src=a[n].dataset.full;i.alt=c.textContent=a[n].dataset.alt}
+a.forEach(function(e,k){e.onclick=function(ev){ev.preventDefault();show(k);d.showModal()}});
+d.querySelector("button").onclick=function(){d.close()};
+d.onclick=function(ev){if(ev.target===d)d.close()};
+document.addEventListener("keydown",function(ev){if(!d.open)return;if(ev.key=="ArrowRight")show(n+1);if(ev.key=="ArrowLeft")show(n-1)});
+})();
+</script>
+{{ end }}

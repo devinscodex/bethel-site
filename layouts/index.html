@@ -1,3 +1,29 @@
-{{ define "main" }}<h1>Welcome to Bethel</h1><p>Latest sermons</p>
-{{ range first 8 (where .Site.RegularPages "Section" "sermons").ByDate.Reverse }}{{ partial "card.html" . }}{{ end }}
-<p><a href="/sermons/">All {{ len (where .Site.RegularPages "Section" "sermons") }} sermons</a></p>{{ end }}
+{{ define "main" }}
+{{ $sermons := where site.RegularPages "Section" "sermons" }}
+{{ $latest := index $sermons.ByDate.Reverse 0 }}
+<section class="hero">
+<div class="label">{{ site.Params.eyebrow }}</div>
+<h1>Bethel means &ldquo;house of God.&rdquo;</h1>
+<p class="v">&ldquo;This is none other but the house of God, and this is the gate of heaven.&rdquo;<br><span class="label">Genesis 28:17</span></p>
+<a class="btn" href="/visit/">Plan your visit</a>
+</section>
+{{ with site.GetPage "/gallery" }}{{ with .Resources.GetMatch "sunrise-over-the-church.jpg" }}{{ $i := .Fill "1600x640 webp q80" }}
+<a class="banner" href="/gallery/"><img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="Bethel Fellowship Church at sunrise" fetchpriority="high"><span class="label">See the gallery</span></a>
+{{ end }}{{ end }}
+<section class="now">
+<div>
+<div class="label">Latest sermon &middot; {{ $latest.Date.Format "January 2, 2006" }}</div>
+<h1><a href="{{ $latest.RelPermalink }}" style="text-decoration:none">{{ $latest.Title }}</a></h1>
+<div class="meta">{{ with $latest.Params.speaker }}{{ delimit . ", " }}{{ end }}</div>
+{{ partial "player.html" $latest }}
+</div>
+<aside class="card"><div class="label">Join us Sunday</div><br>
+<p class="big">Sunday School {{ site.Params.sundaySchool }} AM<br>Worship Service {{ site.Params.worship }} AM</p><hr>
+<p class="big">{{ site.Params.address }}</p></aside>
+</section>
+<section class="list"><h2 class="label">Recent sermons</h2>
+{{ range first 6 (after 1 $sermons.ByDate.Reverse) }}{{ partial "sermon-row.html" . }}{{ end }}
+<p style="margin-top:20px"><a href="/sermons/" class="label">All {{ len $sermons }} sermons</a></p></section>
+{{ with site.GetPage "/ministries" }}<section><h2 class="label" style="margin-top:44px">Life together</h2>
+<div class="grid">{{ range .Pages }}<a class="tile" href="{{ .RelPermalink }}">{{ partial "cover.html" . }}<b>{{ .Title }}</b><span class="meta">{{ .Params.blurb }}</span></a>{{ end }}</div></section>{{ end }}
+{{ end }}

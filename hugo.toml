@@ -1,12 +1,44 @@
 baseURL = "http://localhost:1313/"
-languageCode = "en-us"
+locale = "en-US"
 title = "Bethel Fellowship Church"
 disableKinds = ["rss"]
+
 [taxonomies]
   speaker = "speaker"
   series = "series"
   books = "books"
   topics = "topics"
+
 [params]
   mediaBase = "http://localhost:8099"
-  tagline = "Preview build: placeholder layout, not the final design"
+  eyebrow = "Fortuna, Missouri"
+  address = "37830 Bethel Church Rd., Fortuna, MO 65034"
+  phone = "573-378-4878"
+  email = "bethel.fec@gmail.com"
+  sundaySchool = "9:30"
+  worship = "10:30"
+
+[[menus.main]]
+  name = "Sermons"
+  pageRef = "/sermons"
+  weight = 10
+[[menus.main]]
+  name = "Visit"
+  pageRef = "/visit"
+  weight = 20
+[[menus.main]]
+  name = "Ministries"
+  pageRef = "/ministries"
+  weight = 30
+[[menus.main]]
+  name = "Gallery"
+  pageRef = "/gallery"
+  weight = 35
+[[menus.main]]
+  name = "About"
+  pageRef = "/about"
+  weight = 40
+[[menus.main]]
+  name = "Contact"
+  pageRef = "/contact"
+  weight = 50

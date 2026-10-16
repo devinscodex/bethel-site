@@ -1,3 +1,0 @@
-<div class="card"><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-<div class="mut">{{ .Date.Format "January 2, 2006" }}{{ with .Params.speaker }} · {{ delimit . ", " }}{{ end }}{{ with .Params.series }} · {{ delimit . ", " }}{{ end }}</div>
-{{ with .Params.summary }}<p>{{ . }}</p>{{ end }}</div>
