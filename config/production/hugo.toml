@@ -1,0 +1,4 @@
+baseURL = "https://bethel.ravenscrest.xyz/"
+
+[params]
+  mediaBase = "/media"

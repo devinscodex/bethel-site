@@ -1,0 +1,15 @@
+{
+	admin off
+	auto_https off
+}
+
+http://100.92.128.16:8097 {
+	bind 100.92.128.16
+	root * E:\bethel-media
+	file_server
+	header {
+		Cache-Control "public, max-age=2592000"
+		X-Content-Type-Options nosniff
+		-Server
+	}
+}

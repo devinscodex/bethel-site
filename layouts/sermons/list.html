@@ -2,40 +2,16 @@
 {{ $all := .Pages.ByDate.Reverse }}
 <h1>{{ .Title }}</h1>
 <p class="label"><a href="/series/">Browse by series</a> &nbsp;&middot;&nbsp; <a href="/speaker/">Browse by speaker</a></p>
-<form class="ctl meta" id="ctl" onsubmit="return false">
+<form class="ctl meta" id="ctl">
 <input type="search" id="q" placeholder="Search title, speaker, series, passage" aria-label="Search sermons">
 <select id="speaker" aria-label="Speaker"><option value="">All speakers</option>{{ range site.Taxonomies.speaker.ByCount }}<option value="{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</option>{{ end }}</select>
 <select id="series" aria-label="Series"><option value="">All series</option>{{ range site.Taxonomies.series.Alphabetical }}<option value="{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</option>{{ end }}</select>
 <select id="year" aria-label="Year"><option value="">All years</option>{{ range $all.GroupByDate "2006" "desc" }}<option value="{{ .Key }}">{{ .Key }} ({{ len .Pages }})</option>{{ end }}</select>
 <select id="sort" aria-label="Sort"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="title">Title A&ndash;Z</option><option value="speaker">Speaker A&ndash;Z</option></select>
 <label><input type="checkbox" id="notes"> Has notes</label>
-<button type="button" id="reset">Reset</button>
+<button type="button" id="clr">Reset</button>
 </form>
 <p class="meta" id="count">{{ len $all }} sermons</p>
 <section class="list" id="sl">{{ range $all }}{{ partial "sermon-item.html" . }}{{ end }}</section>
 <p class="meta" id="none" hidden>No sermons match. Try fewer filters.</p>
-<script>
-(function(){
-var L=document.getElementById("sl"),rows=[].slice.call(L.children),g=function(i){return document.getElementById(i)},
-ids=["q","speaker","series","year","sort"];
-function has(r,k,v){return(r.dataset[k]||"").split("|").indexOf(v)>-1}
-function run(){
- var q=g("q").value.trim().toLowerCase(),sp=g("speaker").value,se=g("series").value,yr=g("year").value,nt=g("notes").checked,so=g("sort").value,n=0;
- rows.sort(function(a,b){var A=a.dataset,B=b.dataset;
-  if(so=="old")return A.date<B.date?-1:1;
-  if(so=="title")return A.title.localeCompare(B.title);
-  if(so=="speaker")return A.speaker.localeCompare(B.speaker)||(A.date<B.date?1:-1);
-  return A.date<B.date?1:-1});
- rows.forEach(function(r){var d=r.dataset,ok=(!q||d.q.indexOf(q)>-1)&&(!sp||has(r,"speaker",sp))&&(!se||has(r,"series",se))&&(!yr||d.year==yr)&&(!nt||d.notes);
-  r.hidden=!ok;if(ok)n++;L.appendChild(r)});
- g("count").textContent=n+(n==1?" sermon":" sermons");g("none").hidden=n>0;
- var p=new URLSearchParams();ids.forEach(function(i){if(g(i).value&&!(i=="sort"&&g(i).value=="new"))p.set(i,g(i).value)});
- if(nt)p.set("notes","1");
- history.replaceState(null,"",p.toString()?"#"+p:location.pathname)}
-ids.forEach(function(i){g(i).addEventListener("input",run)});g("notes").onchange=run;
-g("reset").onclick=function(){g("ctl").reset();run()};
-var h=new URLSearchParams(location.hash.slice(1));ids.forEach(function(i){if(h.get(i))g(i).value=h.get(i)});
-g("notes").checked=h.get("notes")=="1";run();
-})();
-</script>
 {{ end }}
