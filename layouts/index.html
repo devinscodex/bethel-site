@@ -6,8 +6,8 @@
 <h1>{{ site.Title }}</h1>
 <a class="btn" href="/visit/">Plan your visit</a>
 </section>
-{{ with site.GetPage "/gallery" }}{{ with .Resources.GetMatch "sunrise-over-the-church.jpg" }}{{ $i := .Fill "1600x640 webp q80" }}
-<a class="banner" href="/gallery/"><img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="Bethel Fellowship Church at sunrise" fetchpriority="high"><span class="label">See the gallery</span></a>
+{{ with site.GetPage "/gallery" }}{{ with .Resources.GetMatch "homepage.jpg" }}{{ $i := .Fill "1400x933 webp q82" }}
+<a class="banner" href="/gallery/"><img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="Bethel Fellowship Church, Fortuna, Missouri" fetchpriority="high"><span class="label">See the gallery</span></a>
 {{ end }}{{ end }}
 <section class="now">
 <div>

@@ -107,3 +107,7 @@ header .srch:hover{color:var(--green)}
 .hero h1{font-size:clamp(44px,9vw,96px);line-height:1.04;letter-spacing:.005em;color:var(--green);margin:.18em 0 .1em}
 .hero{padding:6vh 0 7vh}
 .hero h1{text-wrap:balance}
+.banner img{aspect-ratio:3/2;max-height:72vh;object-position:center 35%}
+.banner img{aspect-ratio:16/10;max-height:62vh;object-position:center 62%}.hero{padding:3vh 0 4vh}
+.hero h1{font-size:clamp(34px,6.6vw,72px);margin:.12em 0 .05em}.hero{padding:0 0 3vh}.hero .btn{margin-top:18px}.banner{margin-bottom:5vh}
+.hero h1{font-size:clamp(30px,5.2vw,62px);text-wrap:nowrap}@media(max-width:560px){.hero h1{text-wrap:balance;font-size:clamp(34px,10vw,48px)}}
