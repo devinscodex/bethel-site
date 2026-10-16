@@ -3,8 +3,7 @@
 {{ $latest := index $sermons.ByDate.Reverse 0 }}
 <section class="hero">
 <div class="label">{{ site.Params.eyebrow }}</div>
-<h1>Bethel means &ldquo;house of God.&rdquo;</h1>
-<p class="v">&ldquo;This is none other but the house of God, and this is the gate of heaven.&rdquo;<br><span class="label">Genesis 28:17</span></p>
+<h1>{{ site.Title }}</h1>
 <a class="btn" href="/visit/">Plan your visit</a>
 </section>
 {{ with site.GetPage "/gallery" }}{{ with .Resources.GetMatch "sunrise-over-the-church.jpg" }}{{ $i := .Fill "1600x640 webp q80" }}
