@@ -115,3 +115,4 @@ header .srch:hover{color:var(--green)}
 #slides img{position:absolute;inset:0;width:100%;height:100%;max-height:none;aspect-ratio:auto;border:0;object-fit:cover}
 #slides img.s{opacity:0;transition:opacity 1.2s ease}#slides img.s.on{opacity:1}
 @media(prefers-reduced-motion:reduce){#slides img.s{transition:none}}
+#slides{width:100%;aspect-ratio:auto;max-height:none;height:clamp(240px,56vw,62vh)}
