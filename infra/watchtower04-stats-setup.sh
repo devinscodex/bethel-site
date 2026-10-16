@@ -31,7 +31,7 @@ server {
     listen $TS_IP:8089;
     root /var/www/bethel-stats;
     index index.html;
-    location / { try_files \$uri =404; }
+    location / { try_files \$uri \$uri/ =404; }
 }
 CONF
 ln -sf /etc/nginx/sites-available/bethel-stats.conf /etc/nginx/sites-enabled/bethel-stats.conf
