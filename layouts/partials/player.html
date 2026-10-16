@@ -1,1 +1,1 @@
-{{ with .Params.audio }}<audio controls preload="none" src="{{ site.Params.mediaBase }}{{ replace . "/audio/" "/" }}"></audio>{{ end }}
+{{ with .Params.audio }}<div class="pl"><audio controls preload="none" src="{{ site.Params.mediaBase }}{{ replace . "/audio/" "/" }}"></audio></div>{{ end }}

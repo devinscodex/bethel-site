@@ -1,5 +1,5 @@
 {{ define "main" }}<article class="prose"><h1>{{ .Title }}</h1>
-<div class="meta">{{ .Date.Format "January 2, 2006" }}{{ with .Params.speaker }} &middot; {{ delimit . ", " }}{{ end }}{{ with .Params.series }} &middot; Series: {{ delimit . ", " }}{{ end }}{{ with .Params.passage }}<br>{{ . }}{{ end }}</div>
+<div class="meta">{{ .Date.Format "January 2, 2006" }}{{ with .GetTerms "speaker" }} &middot; {{ range $i, $e := . }}{{ if $i }}, {{ end }}<a href="{{ $e.RelPermalink }}">{{ $e.LinkTitle }}</a>{{ end }}{{ end }}{{ with .GetTerms "series" }} &middot; Series: {{ range $i, $e := . }}{{ if $i }}, {{ end }}<a href="{{ $e.RelPermalink }}">{{ $e.LinkTitle }}</a>{{ end }}{{ end }}{{ with .Params.passage }}<br>{{ . }}{{ end }}</div>
 {{ partial "player.html" . }}
 {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}{{ .Content }}
 {{ with .Params.notes_pdf }}<p><a href="{{ site.Params.mediaBase }}{{ replace . "/files/" "/" }}">Sermon notes (PDF)</a></p>{{ end }}</article>{{ end }}

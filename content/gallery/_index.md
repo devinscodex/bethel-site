@@ -49,6 +49,7 @@ images:
     alt: "Sunrise through the balcony window"
     group: "Inside"
   - src: stained-glass.jpg
+    anchor: "Bottom"
     alt: "Stained glass window"
     group: "Details"
   - src: pew-end-carving.jpg
