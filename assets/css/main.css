@@ -19,9 +19,9 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;paddi
 nav{display:flex;align-items:center}
 nav a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;margin-left:26px;color:var(--mute)}
 nav a:hover,nav a[aria-current]{color:var(--accent)}
-#tg{background:none;border:1px solid var(--rule);color:var(--mute);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:17px;line-height:1;margin-left:22px}
-#tg:hover{color:var(--accent);border-color:var(--accent)}
-#tg:before{content:"\263E"}[data-theme=light] #tg:before{content:"\2600"}
+.tg{background:none;border:1px solid var(--rule);color:var(--mute);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:17px;line-height:1;margin-left:22px}
+.tg:hover{color:var(--accent);border-color:var(--accent)}
+.tg:before{content:"\263E"}[data-theme=light] .tg:before{content:"\2600"}
 main{padding:6vh 0;flex:1}
 h1{font-weight:400;font-size:clamp(34px,5vw,56px);line-height:1.1;margin:.2em 0 .4em}
 h2{font-weight:400;font-size:28px;margin:1.4em 0 .5em}
@@ -80,7 +80,7 @@ footer{background:var(--green);color:var(--on);border-top:0;margin-top:6vh}
 footer .meta,footer a{color:var(--on)}
 .label{color:var(--green)}
 nav a:hover,nav a[aria-current]{color:var(--green)}
-#tg:hover{color:var(--green);border-color:var(--green)}
+.tg:hover{color:var(--green);border-color:var(--green)}
 .prose a{color:var(--green)}
 .ctl button:hover,.ctl input:focus,.ctl select:focus{border-color:var(--green);outline:0}
 
@@ -100,7 +100,7 @@ header .srch{font:13px var(--sans);letter-spacing:.14em;text-transform:uppercase
 header .srch:hover{color:var(--green)}
 #s{--pagefind-ui-primary:var(--green);--pagefind-ui-text:var(--ink);--pagefind-ui-background:var(--bg);--pagefind-ui-border:var(--rule);--pagefind-ui-tag:var(--panel);--pagefind-ui-border-width:1px;--pagefind-ui-border-radius:0;--pagefind-ui-font:var(--serif);max-width:46rem}
 #s .pagefind-ui__result-link{color:var(--green)}
-@media(max-width:760px){header .wrap{flex-wrap:wrap;gap:10px}nav{flex-wrap:wrap;gap:4px 0}nav a,header .srch{margin-left:0;margin-right:16px}#tg{margin-left:0}.pl{flex-wrap:wrap}.pl .sb{order:5;flex-basis:100%}}
+@media(max-width:760px){header .wrap{flex-wrap:wrap;gap:10px}nav{flex-wrap:wrap;gap:4px 0}nav a,header .srch{margin-left:0;margin-right:16px}.tg{margin-left:0}.pl{flex-wrap:wrap}.pl .sb{order:5;flex-basis:100%}}
 .pl button{color:var(--green);border-color:var(--rule)}
 .pl{margin-bottom:20px}
 @media(max-width:760px){main{padding:3vh 0}nav a,header .srch{padding:9px 0;display:inline-block}.pl button{height:44px;min-width:44px}}
@@ -143,6 +143,10 @@ header .srch:hover{color:var(--green)}
 #isso-thread .isso-comment{margin-top:16px}
 #isso-thread .isso-postbox{margin:12px 0 28px}
 .brand{white-space:nowrap}
-@media(min-width:761px) and (max-width:1000px){header .wrap{flex-wrap:wrap;gap:8px 12px}nav{flex-wrap:wrap;gap:4px 0}nav a,header .srch{margin-left:0;margin-right:18px}#tg{margin-left:0}}
+@media(min-width:761px) and (max-width:1000px){header .wrap{flex-wrap:wrap;gap:8px 12px}nav{flex-wrap:wrap;gap:4px 0}nav a,header .srch{margin-left:0;margin-right:18px}.tg{margin-left:0}}
 #isso-thread .isso-input-wrapper:has(input[name=email]),#isso-thread .isso-input-wrapper:has(input[name=website]){display:none}
 #isso-thread .isso-edit,#isso-thread .isso-delete{display:none}
+footer .wrap{display:grid;grid-template-columns:34px 1fr 34px;align-items:center;gap:12px}
+footer .wrap>span{display:block}
+footer .tg{margin-left:0;border-color:var(--on);color:var(--on);opacity:.85}
+footer .tg:hover{opacity:1;color:var(--on);border-color:var(--on)}
