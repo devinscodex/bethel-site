@@ -3,8 +3,3 @@ baseURL = "https://bethel.ravenscrest.xyz/"
 [params]
   mediaBase = "/media"
   comments = true
-
-[[menus.main]]
-  name = "Board"
-  pageRef = "/board"
-  weight = 38
