@@ -8,7 +8,8 @@ SITE=/etc/nginx/sites-available/bethel
 
 printf 'Isso admin password (min 16 chars, not echoed): '; stty -echo; read -r P; stty echo; echo
 [ ${#P} -ge 16 ] || { echo "too short"; exit 1; }
-case "$P" in *[\ \$\`\\\"\']*) echo "avoid spaces and \$ \` \\ quotes in the password"; exit 1;; esac
+case "$P" in *[!A-Za-z0-9._!@#-]*) echo "use only letters, digits and - _ . ! @ #"; exit 1;; esac
+
 
 mkdir -p /opt/isso/config /opt/isso/db
 umask 077
