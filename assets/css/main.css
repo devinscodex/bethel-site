@@ -120,32 +120,9 @@ header .srch:hover{color:var(--green)}
 .tx h3{font-size:1.05em;margin:1.6em 0 .4em;color:var(--green)}
 .tx{margin-bottom:1.4em}
 .cols.one{grid-template-columns:minmax(0,42rem)}
-.thread h2{margin-top:0}
-@media(min-width:1000px){.thread{position:sticky;top:96px;align-self:start;max-height:calc(100vh - 120px);overflow:auto}}
-#isso-thread{font-family:var(--sans);font-size:15px}
-#isso-thread .isso-postbox{margin:12px 0}
-#isso-thread .isso-textarea,#isso-thread input[type=text],#isso-thread input[type=email]{background:var(--panel);color:var(--ink);border:1px solid var(--rule);padding:8px;font:inherit;width:100%;box-sizing:border-box}
-#isso-thread .isso-textarea{min-height:90px}
-#isso-thread input[type=submit]{background:var(--green);color:var(--on);border:0;padding:9px 18px;font:13px var(--sans);letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
-#isso-thread .isso-comment{border-top:1px solid var(--rule);padding:12px 0}
-#isso-thread .isso-author{font-weight:600}
-#isso-thread .isso-note,#isso-thread time,#isso-thread .isso-spacer{color:var(--mute)}
-#isso-thread a{color:var(--green)}
 @media(min-width:1000px){.cols{grid-template-columns:minmax(0,42rem) minmax(280px,1fr)}.cols.one{grid-template-columns:minmax(0,42rem)}}
-#isso-thread h4,#isso-thread .isso-thread-heading{color:var(--mute);font:600 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;margin:14px 0 6px}
-#isso-thread .isso-author{color:var(--ink)}
-#isso-thread .isso-text,#isso-thread .isso-text p{color:var(--ink)}
-#isso-thread input[type=button],#isso-thread input[type=submit]{background:transparent;color:var(--green);border:1px solid var(--green);padding:9px 16px;font:12px var(--sans);letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
-#isso-thread input[type=submit]{background:var(--green);color:var(--on)}
-#isso-thread .isso-textarea,#isso-thread input[type=text],#isso-thread input[type=email],#isso-thread input[type=url]{width:100%;box-sizing:border-box;margin:4px 0}
-#isso-thread ::placeholder{color:var(--mute);opacity:.8}
-#isso-thread .isso-post-action{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
-#isso-thread .isso-comment{margin-top:16px}
-#isso-thread .isso-postbox{margin:12px 0 28px}
 .brand{white-space:nowrap}
 @media(min-width:761px) and (max-width:1000px){header .wrap{flex-wrap:wrap;gap:8px 12px}nav{flex-wrap:wrap;gap:4px 0}nav a,header .srch{margin-left:0;margin-right:18px}.tg{margin-left:0}}
-#isso-thread .isso-input-wrapper:has(input[name=email]),#isso-thread .isso-input-wrapper:has(input[name=website]){display:none}
-#isso-thread .isso-edit,#isso-thread .isso-delete{display:none}
 footer .wrap{display:grid;grid-template-columns:34px 1fr 34px;align-items:center;gap:12px}
 footer .wrap>span{display:block}
 footer .tg{margin-left:0;border-color:var(--on);color:var(--on);opacity:.85}

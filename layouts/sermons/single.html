@@ -2,7 +2,7 @@
 <div class="meta">{{ .Date.Format "January 2, 2006" }}{{ with .GetTerms "speaker" }} &middot; {{ range $i, $e := . }}{{ if $i }}, {{ end }}<a href="{{ $e.RelPermalink }}">{{ $e.LinkTitle }}</a>{{ end }}{{ end }}{{ with .GetTerms "series" }} &middot; Series: {{ range $i, $e := . }}{{ if $i }}, {{ end }}<a href="{{ $e.RelPermalink }}">{{ $e.LinkTitle }}</a>{{ end }}{{ end }}{{ with .Params.passage }}<br>{{ . }}{{ end }}</div>
 <div class="sticky">{{ partial "player.html" . }}</div>
 {{ $n := index site.Data.notes .File.ContentBaseName }}
-<div class="cols{{ if not site.Params.comments }} one{{ end }}">
+<div class="cols one">
 <div class="prose">
 {{ if $n }}
 {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
@@ -12,7 +12,7 @@
 {{ else }}{{ with .Params.summary }}<p>{{ . }}</p>{{ end }}{{ .Content }}{{ end }}
 {{ with .Params.notes_pdf }}<p><a href="{{ site.Params.mediaBase }}{{ replace . "/files/" "/" }}">Download notes (PDF)</a></p>{{ end }}
 </div>
-{{ if site.Params.comments }}{{ partial "thread.html" (dict "id" (printf "/sermons/%s/" .File.ContentBaseName) "heading" "Shared notes" "blurb" "Share what this message meant to you. Notes appear right away; unkind or off-topic ones are removed.") }}{{ end }}
+
 </div>
 <nav class="pn">{{ with .PrevInSection }}<a href="{{ .RelPermalink }}" rel="prev"><span class="label">&larr; Older</span><br>{{ .Title }}</a>{{ else }}<span></span>{{ end }}{{ with .NextInSection }}<a href="{{ .RelPermalink }}" rel="next"><span class="label">Newer &rarr;</span><br>{{ .Title }}</a>{{ end }}</nav>
 </article>{{ end }}
