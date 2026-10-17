@@ -2,5 +2,5 @@
 <a class="brand" href="{{ "/" | relURL }}">{{ site.Title }}</a>
 <nav>{{ $cur := . }}{{ range site.Menus.main }}<a href="{{ .URL }}"{{ if or ($cur.IsMenuCurrent "main" .) ($cur.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}
 <a href="/search/" class="srch" aria-label="Search">Search</a>
-<button id="tg" type="button" aria-label="Toggle light/dark" title="Toggle light/dark"></button></nav>
+<button class="tg" type="button" aria-label="Toggle light/dark" title="Toggle light/dark"></button></nav>
 </div></header>

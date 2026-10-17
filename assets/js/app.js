@@ -1,4 +1,4 @@
-document.getElementById("tg").onclick=function(){var r=document.documentElement,s=r.dataset.theme==="dark"?"light":"dark";r.dataset.theme=s;document.cookie="bt="+s+"; max-age=31536000; path=/; SameSite=Lax"};
+document.querySelectorAll(".tg").forEach(function(b){b.onclick=function(){var r=document.documentElement,s=r.dataset.theme==="dark"?"light":"dark";r.dataset.theme=s;document.cookie="bt="+s+"; max-age=31536000; path=/; SameSite=Lax"}});
 /* .pl */
 if(document.querySelector('.pl')){
 document.querySelectorAll(".pl").forEach(function(p){var a=p.querySelector("audio");a.controls=false;
