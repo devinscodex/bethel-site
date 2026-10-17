@@ -3,7 +3,7 @@
 # Needs the one-time server setup in infra/README.md.
 set -e
 cd "$(dirname "$0")/.."
-hugo --minify --environment production
+hugo --minify --environment production --cleanDestinationDir
 pagefind --site public
 rsync -a --delete public/ raven@quill:/var/www/bethel/
 echo "deployed: https://bethel.ravenscrest.xyz/"

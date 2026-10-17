@@ -2,4 +2,4 @@ baseURL = "https://bethel.ravenscrest.xyz/"
 
 [params]
   mediaBase = "/media"
-  comments = true
+  comments = false
