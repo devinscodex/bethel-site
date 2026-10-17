@@ -53,9 +53,3 @@ var h=new URLSearchParams(location.hash.slice(1));ids.forEach(function(i){if(h.g
 g("notes").checked=h.get("notes")=="1";run();
 })();
 }
-
-/* Personal sermon notes, kept in this browser only */
-(function(){var t=document.getElementById("mynotes"),a=document.querySelector(".sermon");if(!t||!a)return;
-var k="bn:"+a.dataset.slug,s=document.getElementById("mystat"),w;
-try{t.value=localStorage.getItem(k)||""}catch(e){s.textContent="Notes cannot be saved in this browser.";return}
-t.addEventListener("input",function(){clearTimeout(w);w=setTimeout(function(){try{localStorage.setItem(k,t.value);s.textContent="Saved on this device only."}catch(e){s.textContent="Could not save."}},400)})})();
