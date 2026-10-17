@@ -15,6 +15,7 @@ os.makedirs(out_dir, exist_ok=True)
 def load(n): return json.load(open(ARC + n))
 names = lambda f: {t["id"]: html.unescape(t["name"]) for t in load(f)}
 preachers = names("tax_wpfc_preacher.json")
+TITLE_FIX = {"261011": "The Heart of Paul"}
 AUDIO_FIX = {"kaleo-13-called-to-stand-firm": "/audio/sermons/2020/03/2020-03-08-Kaleo-13-Called-To-Stand-Firm.mp3"}
 SPEAKER_FIX = {"Eric Loganbill": "Erik Loganbill", "Bethel Church Family": "Bethel Family"}
 preachers = {k: SPEAKER_FIX.get(v, v) for k, v in preachers.items()}
@@ -61,6 +62,7 @@ for s in sermons:
         "wp_id": s["id"],
     }
     fm["audio"] = AUDIO_FIX.get(slug, fm["audio"])
+    fm["title"] = TITLE_FIX.get(slug, fm["title"])
     summary = clean(s["excerpt"]["rendered"])
     body = clean(s["content"]["rendered"])
     with open(os.path.join(out_dir, slug + ".md"), "w", encoding="utf-8") as f:
