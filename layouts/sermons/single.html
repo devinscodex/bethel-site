@@ -6,7 +6,6 @@
 <div class="prose">
 {{ if $n }}
 {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
-<h2>Key takeaways</h2><ul class="kt">{{ range $n.takeaways }}<li>{{ . | htmlEscape | replaceRE `\*\*(.+?)\*\*` "<strong>$1</strong>" | safeHTML }}</li>{{ end }}</ul>
 <details class="tx"><summary>Full transcript</summary>
 {{ range $n.transcript }}{{ with .h }}<h3>{{ . }}</h3>{{ end }}{{ range .p }}<p>{{ . | htmlEscape | replaceRE `\*\*(.+?)\*\*` "<strong>$1</strong>" | safeHTML }}</p>{{ end }}{{ end }}
 </details>
