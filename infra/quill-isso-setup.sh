@@ -1,6 +1,6 @@
 #!/bin/sh
 # Run on quill as root: sudo sh quill-isso-setup.sh
-# Installs the Isso comment server (moderated) in Docker, bound to 127.0.0.1:8090,
+# Installs the Isso comment server (posts appear immediately; the admin deletes afterwards) in Docker, bound to 127.0.0.1:8090,
 # and adds the /comments/ proxy to the site's nginx. Expects quill-bethel.conf in the same directory.
 set -e
 D=$(cd "$(dirname "$0")" && pwd)
@@ -21,7 +21,7 @@ max-age = 15m
 notify = stdout
 
 [moderation]
-enabled = true
+enabled = false
 purge-after = 30d
 
 [server]

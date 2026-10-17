@@ -12,7 +12,7 @@
 {{ else }}{{ with .Params.summary }}<p>{{ . }}</p>{{ end }}{{ .Content }}{{ end }}
 {{ with .Params.notes_pdf }}<p><a href="{{ site.Params.mediaBase }}{{ replace . "/files/" "/" }}">Download notes (PDF)</a></p>{{ end }}
 </div>
-{{ if site.Params.comments }}{{ partial "thread.html" (dict "id" (printf "/sermons/%s/" .File.ContentBaseName) "heading" "Shared notes" "blurb" "Share what this message meant to you. Notes are reviewed before they appear.") }}{{ end }}
+{{ if site.Params.comments }}{{ partial "thread.html" (dict "id" (printf "/sermons/%s/" .File.ContentBaseName) "heading" "Shared notes" "blurb" "Share what this message meant to you. Notes appear right away; unkind or off-topic ones are removed.") }}{{ end }}
 </div>
 <nav class="pn">{{ with .PrevInSection }}<a href="{{ .RelPermalink }}" rel="prev"><span class="label">&larr; Older</span><br>{{ .Title }}</a>{{ else }}<span></span>{{ end }}{{ with .NextInSection }}<a href="{{ .RelPermalink }}" rel="next"><span class="label">Newer &rarr;</span><br>{{ .Title }}</a>{{ end }}</nav>
 </article>{{ end }}
