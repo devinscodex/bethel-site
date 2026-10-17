@@ -119,8 +119,10 @@ header .srch:hover{color:var(--green)}
 .tx{margin-top:1.4em;border-top:1px solid var(--rule);padding-top:1em}.tx summary{cursor:pointer;font:13px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
 .tx h3{font-size:1.05em;margin:1.6em 0 .4em;color:var(--green)}
 .tx{margin-bottom:1.4em}
-.cols.one{grid-template-columns:minmax(0,42rem)}
-@media(min-width:1000px){.cols{grid-template-columns:minmax(0,42rem) minmax(280px,1fr)}.cols.one{grid-template-columns:minmax(0,42rem)}}
+.cols.one{grid-template-columns:minmax(0,1fr)}
+.cols.one .prose{max-width:none}
+.cols.one .prose>p,.cols.one .prose>.label{max-width:42rem}
+.tx p{line-height:1.7}
 .brand{white-space:nowrap}
 @media(min-width:761px) and (max-width:1000px){header .wrap{flex-wrap:wrap;gap:8px 12px}nav{flex-wrap:wrap;gap:4px 0}nav a,header .srch{margin-left:0;margin-right:18px}.tg{margin-left:0}}
 footer .wrap{display:grid;grid-template-columns:34px 1fr 34px;align-items:center;gap:12px}
