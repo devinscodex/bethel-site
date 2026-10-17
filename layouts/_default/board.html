@@ -1,4 +1,0 @@
-{{ define "main" }}<article class="prose"><h1>{{ .Title }}</h1>
-{{ .Content }}
-{{ if site.Params.comments }}{{ partial "thread.html" (dict "id" "/board/" "heading" "Message board" "blurb" "Be kind and keep it about faith and church life. Messages appear right away; unkind or off-topic ones are removed.") }}{{ end }}
-</article>{{ end }}

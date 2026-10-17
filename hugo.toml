@@ -11,7 +11,6 @@ disableKinds = ["rss"]
 
 [params]
   mediaBase = "http://localhost:8099"
-  comments = false
   eyebrow = "Fortuna, Missouri"
   description = "Bethel Fellowship Church in Fortuna, Missouri. Sunday School 9:30 AM, Worship 10:30 AM. Listen to nearly 300 archived sermons, see the church, and plan your visit."
   address = "37830 Bethel Church Rd., Fortuna, MO 65034"
@@ -36,11 +35,6 @@ disableKinds = ["rss"]
   name = "Gallery"
   pageRef = "/gallery"
   weight = 35
-# Board link: re-enable together with comments = true and draft: false in content/board.md
-# [[menus.main]]
-#   name = "Board"
-#   pageRef = "/board"
-#   weight = 38
 [[menus.main]]
   name = "About"
   pageRef = "/about"
