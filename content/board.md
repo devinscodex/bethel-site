@@ -1,6 +1,7 @@
 ---
 title: "Message Board"
 layout: board
+draft: true
 description: "A message board for the Bethel Fellowship Church family and guests."
 ---
 

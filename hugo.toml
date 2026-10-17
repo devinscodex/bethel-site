@@ -36,10 +36,11 @@ disableKinds = ["rss"]
   name = "Gallery"
   pageRef = "/gallery"
   weight = 35
-[[menus.main]]
-  name = "Board"
-  pageRef = "/board"
-  weight = 38
+# Board link: re-enable together with comments = true and draft: false in content/board.md
+# [[menus.main]]
+#   name = "Board"
+#   pageRef = "/board"
+#   weight = 38
 [[menus.main]]
   name = "About"
   pageRef = "/about"
