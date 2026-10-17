@@ -145,3 +145,4 @@ header .srch:hover{color:var(--green)}
 .brand{white-space:nowrap}
 @media(min-width:761px) and (max-width:1000px){header .wrap{flex-wrap:wrap;gap:8px 12px}nav{flex-wrap:wrap;gap:4px 0}nav a,header .srch{margin-left:0;margin-right:18px}#tg{margin-left:0}}
 #isso-thread .isso-input-wrapper:has(input[name=email]),#isso-thread .isso-input-wrapper:has(input[name=website]){display:none}
+#isso-thread .isso-edit,#isso-thread .isso-delete{display:none}
