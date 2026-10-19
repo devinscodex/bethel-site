@@ -1,11 +1,11 @@
 # Bethel Fellowship Church website
 
-Hugo site (custom theme, no framework) for Bethel Fellowship Church in Fortuna, Missouri.
-Live at https://bethel.ravenscrest.xyz/. Source of truth is this Fossil repo; every commit
-mirrors to a private GitHub repo.
+Hugo site, custom theme, no framework. Live at https://bethel.ravenscrest.xyz/.
 
-Sunday School 9:30 AM, Worship 10:30 AM. The site carries nearly 300 archived sermons, a
-photo gallery, ministry info, and visit/contact details.
+Bethel Fellowship Church, Fortuna, Missouri. Sunday School 9:30 AM, Worship 10:30 AM.
+Sermon archive (nearly 300), photo gallery, ministries, visit/contact info.
+
+Fossil is the source of truth; every commit mirrors to a private GitHub repo.
 
 ## Quick start
 
@@ -14,45 +14,31 @@ Requires `hugo` and `pagefind` on PATH.
     tools/build.sh                        # hugo --minify + pagefind search index -> public/
     python3 -m http.server -d public 8080 # preview at localhost:8080
 
-Deploy to production: `tools/deploy.sh` (production build, search index, rsync to quill).
-The public relay can still show the previous version for up to 10 minutes after a deploy.
-Needs the one-time server setup in `infra/README.md`.
+Deploy: `tools/deploy.sh` (production build, search index, rsync to quill). The public relay
+can still show the previous version for up to 10 minutes after a deploy. One-time server setup
+is in `infra/README.md`.
 
 ## Layout
 
-    content/      Hugo content: sermons, ministries, gallery, about, visit, contact
-    layouts/      Custom theme templates (no external Hugo theme in use)
+    content/      sermons, ministries, gallery, about, visit, contact
+    layouts/      custom theme templates (no external Hugo theme)
     assets/       CSS/JS source
-    static/       Files served as-is (fonts, favicon, robots.txt)
-    data/notes/   Sermon transcript JSON, built by tools/extract_notes.py
-    sketches/     Design explorations, not part of the live site
-    infra/        Server configs + hosting runbook -- see infra/README.md
+    static/       served as-is: fonts, favicon, robots.txt
+    data/notes/   sermon transcript JSON, built by tools/extract_notes.py
+    sketches/     design explorations, not part of the live site
+    infra/        server configs + hosting runbook, see infra/README.md
     tools/        build.sh, deploy.sh, import_sermons.py, extract_notes.py
 
-## Hosting, security, and day-to-day ops
+## Hosting and ops
 
-Full detail -- the watchtower04/quill/zekrom relay chain, DNS, nginx/fail2ban configs, the
-visitor report, and the sermon-import pipeline -- lives in `infra/README.md`. Read that before
-touching anything server-side.
+The relay chain (watchtower04/quill/zekrom), DNS, nginx/fail2ban configs, visitor report, and
+sermon-import pipeline are all in `infra/README.md`. Read that before touching anything
+server-side.
 
 ## Releases
 
-Tags mark real milestones on trunk, not every commit -- see `fossil timeline tag:v1.2` (or any
-tag name) for the exact commit list behind one.
-
-- **v1.0** -- First complete site: sermon archive (296 imported sermons), light/dark Everforest
-  theme, custom audio player with Pagefind search, series/speaker/topic pages, mobile nav,
-  gallery, strict-CSP-ready JS, and the three-server production hosting setup
-  (quill/watchtower04/zekrom).
-- **v1.1** -- Added visitor comments and a message board (Isso-based), with admin moderation
-  (notes publish immediately, admin deletes afterward) and a stricter admin password check.
-- **v1.2** -- Comments and the message board retired at Steve's request (code kept under the
-  `comments-isso` tag, not deleted -- `fossil cat -r comments-isso infra/quill-isso-setup.sh` to
-  look at it); added a visitors-only traffic report (GoAccess) with scanner bans, plus sermon
-  merges and photo/layout polish. Current hosting runbook lives in `infra/README.md`.
-
-Tagging a new release: `fossil tag add vX.Y <check-in>` on trunk once a real milestone lands,
-then a one-line summary added here of what actually shipped since the last tag.
+Tagged on trunk at real milestones, not every commit. Each tag carries its own description
+(`fossil info v1.2`, or browse tags in the Fossil web UI) rather than duplicating it here.
 
 ## Conventions
 
@@ -63,5 +49,4 @@ then a one-line summary added here of what actually shipped since the last tag.
 
 ## Open items
 
-See `infra/README.md`'s Open items section (staff upload tool, Search Console, church planner,
-pending quill restarts).
+See `infra/README.md`'s Open items section.
