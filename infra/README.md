@@ -64,5 +64,8 @@ Removing it from the servers takes two commands that need sudo: `quill-isso-remo
 
 - Upload tool for staff to add sermon audio and notes (review before publishing, per-person logins).
 - Search Console and Google Business Profile.
-- Church planner (replacement for Planning Center), starting from the Airtable export.
+- Church planner: reverse-engineered Planning Center "Services" app, fed by data from Airtable
+  (replaces the paid Planning Center subscription). Real scope: plan worship services (song
+  sets, order of service) and practice/rehearsal schedules, assign volunteers/musicians, and
+  communicate with them (reminders, schedule changes, practice notes).
 - Quill has deferred service restarts waiting (including Docker, which carries Joplin).
