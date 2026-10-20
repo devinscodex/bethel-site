@@ -49,9 +49,22 @@ Slice 2, volunteer scheduling (tables designed now, built later):
 - A single SQLite file on one host is a single point of loss. Mitigate: nightly copy plus restore test before real data goes in.
 - Scope creep into a full church-management system. Mitigate: slice 1 ships alone and stays useful.
 
+## Decisions (Devin, 2026-10-19)
+
+- Logins now: Devin only. Later: worship team and admin staff (Devin, Steve, Becky).
+- Calendar for real events (meetings, etc.) is in scope, alongside service plans.
+- Airtable export comes later; slice 1 waits on it for the real workflow.
+
+## Calendar (slice 1b)
+
+- `event`: id, title, start, end, all_day, location, notes, visibility (staff, worship team, everyone with a login), created_by
+- Service dates appear on the calendar automatically from `service`; other events are entered by planners and admins.
+- Views: month grid and a plain upcoming list; both print cleanly.
+- Optional later: a read-only iCal feed per person (secret URL) so it shows in phone calendars; a public "upcoming events" page on the static site generated from events marked everyone.
+- Roles: admin and planner create and edit; members see the events their visibility allows.
+
 ## Open questions for Devin
 
 - Airtable: export each table to CSV and share one real service plan plus how it is used on a Sunday, so slice 1 matches the real workflow.
-- Who needs a login in week one: just Devin and Steve, or the whole worship team?
 - Reminders: email, text, or neither at first?
 - Planning Center: does Bethel already have an account? If so, reading its public API may beat rebuilding the data model.
