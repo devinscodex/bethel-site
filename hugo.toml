@@ -36,6 +36,10 @@ disableKinds = ["rss"]
   pageRef = "/gallery"
   weight = 35
 [[menus.main]]
+  name = "Tools"
+  pageRef = "/tools"
+  weight = 38
+[[menus.main]]
   name = "About"
   pageRef = "/about"
   weight = 40
