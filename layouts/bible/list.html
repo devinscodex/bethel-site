@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ $books := resources.Get "bible/web/books.json" | transform.Unmarshal }}
+<h1>{{ .Title }}</h1>
+<div id="rd" data-pagefind-ignore data-base="/bible/web/" data-tr="WEB" tabindex="0" aria-label="Bible reader">
+<p class="meta">Keyboard: arrows or j/k to move, Enter to open, Backspace to go back, g to jump to a reference (for example <code>gal 4:21</code>), [ and ] for the previous and next chapter, y to copy a verse.</p>
+{{ range $books }}<h2 class="label" id="{{ .s }}">{{ .n }}</h2><p class="chs">{{ $s := .s }}{{ range seq .ch }}<a href="/bible/{{ $s }}/{{ . }}/">{{ . }}</a> {{ end }}</p>{{ end }}
+</div>
+<script type="application/json" id="bd">{"books":{{ $books | jsonify | safeJS }},"files":{ {{ range $i, $f := resources.Match "bible/web/*.json" }}{{ if ne $f.Name "bible/web/books.json" }}{{ if $i }},{{ end }}"{{ path.BaseName $f.Name | strings.TrimSuffix ".json" }}":"{{ $f.RelPermalink }}"{{ end }}{{ end }} }}</script>
+{{ $js := resources.Get "js/bible.js" | minify | fingerprint }}<script src="{{ $js.RelPermalink }}" defer></script>
+{{ end }}
