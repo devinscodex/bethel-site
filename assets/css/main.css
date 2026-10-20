@@ -3,16 +3,16 @@
 @font-face{font-family:"Source Sans 3";src:url(/fonts/SourceSans3.woff2) format("woff2");font-weight:200 900;font-style:normal;font-display:swap}
 :root{--serif:"Source Serif 4",Georgia,"Iowan Old Style",serif;--sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
 body{font-variant-numeric:lining-nums}
-html[data-theme=light]{--bg:#f3ead3;--panel:#eae4ca;--ink:#3f4b52;--mute:#5c6a72;--accent:#4b6b1f;--green:#4b6b1f;--tint:#e4e6c3;--rule:#c9c9a0;--on:#f3ead3;color-scheme:light}
-:root,html[data-theme=dark]{--bg:#2d353b;--panel:#343f44;--ink:#d3c6aa;--mute:#9da9a0;--accent:#a7c080;--green:#a7c080;--tint:#3a4a40;--rule:#475258;--on:#2d353b;color-scheme:dark}
+html[data-theme=light]{--bg:#f3ead3;--panel:#eae4ca;--ink:#3f4b52;--mute:#4f5d65;--accent:#4b6b1f;--green:#4b6b1f;--tint:#e4e6c3;--rule:#c9c9a0;--on:#f3ead3;color-scheme:light}
+:root,html[data-theme=dark]{--bg:#2d353b;--panel:#343f44;--ink:#d3c6aa;--mute:#b4bfb6;--accent:#a7c080;--green:#a7c080;--tint:#3a4a40;--rule:#475258;--on:#2d353b;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0}
 body{display:flex;flex-direction:column;min-height:100vh;font:18px/1.65 var(--serif);background:var(--bg);color:var(--ink)}
 a{color:inherit}
 img{max-width:100%;height:auto;display:block}
 .wrap{max-width:1100px;margin:auto;padding:0 5vw}
 .label,nav a,.meta{font-family:var(--sans)}
-.label{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
-.meta{font-size:14px;color:var(--mute)}
+.label{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.meta{font-size:16px;color:var(--mute)}
 header{border-bottom:1px solid var(--rule)}
 header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:18px}
 .brand{font-size:22px;letter-spacing:.03em;text-decoration:none}
@@ -149,3 +149,16 @@ footer .tg:hover{opacity:1;color:var(--on);border-color:var(--on)}
 .hello .meta{margin:.5em 0 0}.hello .meta a{color:var(--accent)}
 .now{display:block;padding-top:clamp(20px,3vw,36px)}
 .now h2{margin:.1em 0 .3em}
+
+.hello .when{font-size:clamp(22px,2.8vw,28px)}
+.hello .meta{font-size:17px}
+.now h2{font-size:clamp(30px,4.2vw,42px);line-height:1.15;margin:.15em 0 .25em}
+.now .meta{font-size:18px;margin-bottom:14px}
+.list h2.label{margin:56px 0 14px}
+.row .t{font-size:clamp(21px,2.4vw,24px)}
+.row .meta{font-size:16px}
+.hello h1{font-size:clamp(26px,3.4vw,36px)}
+.pl button{font-size:15px;height:44px;min-width:44px}
+.pl .sk,.pl .sp{font-size:15px}
+.pl .tm{font:16px var(--sans);color:var(--mute)}
+.pl .sb{height:6px}
