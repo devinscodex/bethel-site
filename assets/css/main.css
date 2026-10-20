@@ -122,17 +122,17 @@ footer .tg:hover{opacity:1;color:var(--on);border-color:var(--on)}
 .car .trk{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
 .car .trk::-webkit-scrollbar{display:none}
 .car figure{flex:0 0 100%;scroll-snap-align:center;margin:0}
-.car img{display:block;width:100%;height:auto;aspect-ratio:16/9;max-height:48vh;min-height:280px;object-fit:cover;object-position:center 30%}
+.car img{display:block;width:100%;height:auto;aspect-ratio:16/9;max-height:max(48vh,280px);object-fit:cover;object-position:center 30%}
 .car .cb{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:rgba(10,13,16,.62);color:#f5f1e8;font-size:28px;line-height:1;padding:0 0 3px;cursor:pointer;opacity:.75;transition:opacity .2s,background .2s}
 .car:hover .cb,.car:focus-within .cb{opacity:1}
 .car .cb:hover,.car .cb:focus-visible{background:rgba(10,13,16,.9)}
 .car .pv{left:14px}.car .nx{right:14px}
 .car .dots{filter:drop-shadow(0 1px 3px rgba(0,0,0,.65));position:absolute;right:clamp(10px,3vw,36px);bottom:clamp(14px,3vw,34px);display:flex;align-items:center}
-.car .dt{position:relative;width:28px;height:28px;padding:0;border:0;background:none;cursor:pointer}
-.car .dt::before{content:"";position:absolute;inset:8px;border:1px solid #f5f1e8;border-radius:50%}
+.car .dt{position:relative;width:44px;height:44px;padding:0;border:0;background:none;cursor:pointer}
+.car .dt::before{content:"";position:absolute;inset:17px;border:1px solid #f5f1e8;border-radius:50%}
 .car .dt[aria-current=true]::before{background:#f5f1e8}
-.car .pz{width:28px;height:28px;margin-right:6px;padding:0;border:0;background:none;color:#f5f1e8;font-size:13px;cursor:pointer}
-@media(max-width:560px){.car img{aspect-ratio:4/3}.car .cb{width:38px;height:38px}}
+.car .pz{width:44px;height:44px;margin-right:2px;padding:0;border:0;background:none;color:#f5f1e8;font-size:13px;cursor:pointer}
+@media(max-width:560px){.car img{aspect-ratio:4/3}.car .cb{width:44px;height:44px}}
 @media(prefers-reduced-motion:reduce){.car .trk{scroll-behavior:auto}.car .cb{transition:none}}
 .bv p{margin:0 0 .6em;max-width:42rem}.bv sup{color:var(--mute);font:600 .65em var(--sans);margin-right:.3em}
 .bn{display:flex;gap:24px;flex-wrap:wrap;margin:28px 0 12px}.chs a{display:inline-block;min-width:2.2em;padding:2px 6px;text-align:center}

@@ -4,8 +4,8 @@
 {{ with site.GetPage "/gallery" }}{{ $g := . }}{{ $alts := dict }}{{ range .Params.images }}{{ $alts = merge $alts (dict .src .alt) }}{{ end }}
 <div class="car" role="region" aria-roledescription="carousel" aria-label="Photos of Bethel Fellowship Church">
 <div class="trk" tabindex="0">{{ range $k, $src := site.Params.homeSlides }}{{ with $g.Resources.GetMatch $src }}{{ $w := math.Min 2000 .Width }}{{ $i := .Fill (printf "%dx%d webp q80 Smart" (int $w) (int (div (mul $w 5.0) 8))) }}
-<figure aria-roledescription="slide" aria-label="{{ add $k 1 }} of {{ len site.Params.homeSlides }}"><img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="{{ index $alts $src | default "Bethel Fellowship Church, Fortuna, Missouri" }}"{{ if eq $k 0 }} fetchpriority="high"{{ else }} loading="lazy"{{ end }}></figure>
-{{ end }}{{ end }}</div>
+<figure aria-roledescription="slide" aria-label="{{ add $k 1 }} of {{ len site.Params.homeSlides }}"><img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="{{ index $alts $src | default "Bethel Fellowship Church, Fortuna, Missouri" }}"{{ if eq $k 0 }} fetchpriority="high"{{ else if gt $k 1 }} loading="lazy"{{ end }}></figure>
+{{ else }}{{ warnf "homeSlides: %s not found in gallery" $src }}{{ end }}{{ end }}</div>
 </div>
 {{ end }}
 <section class="hello">
