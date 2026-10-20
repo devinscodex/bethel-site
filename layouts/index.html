@@ -6,22 +6,23 @@
 <div class="trk" tabindex="0">{{ range $k, $src := site.Params.homeSlides }}{{ with $g.Resources.GetMatch $src }}{{ $i := .Fill "1400x875 webp q80 Smart" }}
 <figure aria-roledescription="slide" aria-label="{{ add $k 1 }} of {{ len site.Params.homeSlides }}"><img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="{{ index $alts $src | default "Bethel Fellowship Church, Fortuna, Missouri" }}"{{ if eq $k 0 }} fetchpriority="high"{{ else }} loading="lazy"{{ end }}></figure>
 {{ end }}{{ end }}</div>
-<div class="cap"><div class="label">{{ site.Params.eyebrow }}</div><h1>{{ site.Title }}</h1></div>
 </div>
 {{ end }}
+<section class="hello">
+<h1>{{ site.Title }}</h1>
+<p class="when">Sunday School {{ site.Params.sundaySchool }} AM &middot; Worship {{ site.Params.worship }} AM</p>
+<p class="meta">{{ site.Params.address }} &middot; <a href="/visit/">Plan your visit</a></p>
+</section>
 <section class="now">
 <div>
 <div class="label">Latest sermon &middot; {{ $latest.Date.Format "January 2, 2006" }}</div>
-<h1><a href="{{ $latest.RelPermalink }}" style="text-decoration:none">{{ $latest.Title }}</a></h1>
+<h2><a href="{{ $latest.RelPermalink }}" style="text-decoration:none">{{ $latest.Title }}</a></h2>
 <div class="meta">{{ with $latest.Params.speaker }}{{ delimit . ", " }}{{ end }}</div>
 {{ partial "player.html" $latest }}
 </div>
-<aside class="card"><div class="label">Join us Sunday</div><br>
-<p class="big">Sunday School {{ site.Params.sundaySchool }} AM<br>Worship Service {{ site.Params.worship }} AM</p><hr>
-<p class="big">{{ site.Params.address }}</p></aside>
 </section>
 <section class="list"><h2 class="label">Recent sermons</h2>
-{{ range first 6 (after 1 $sermons.ByDate.Reverse) }}{{ partial "sermon-row.html" . }}{{ end }}
+{{ range first 4 (after 1 $sermons.ByDate.Reverse) }}{{ partial "sermon-row.html" . }}{{ end }}
 <p style="margin-top:20px"><a href="/sermons/" class="label">All {{ len $sermons }} sermons</a></p></section>
 {{ with site.GetPage "/ministries" }}<section><h2 class="label" style="margin-top:44px">Life together</h2>
 <div class="grid">{{ range .Pages }}<a class="tile" href="{{ .RelPermalink }}">{{ partial "cover.html" . }}<b>{{ .Title }}</b><span class="meta">{{ .Params.blurb }}</span></a>{{ end }}</div></section>{{ end }}
