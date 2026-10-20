@@ -1,14 +1,14 @@
 {{ define "main" }}
 {{ $sermons := where site.RegularPages "Section" "sermons" }}
 {{ $latest := index $sermons.ByDate.Reverse 0 }}
-<section class="hero">
-<div class="label">{{ site.Params.eyebrow }}</div>
-<h1>{{ site.Title }}</h1>
-<a class="btn" href="/visit/">Plan your visit</a>
-</section>
-{{ with site.GetPage "/gallery" }}{{ with .Resources.GetMatch "homepage.jpg" }}{{ $i := .Fill "1400x875 webp q82" }}
-<div class="banner"><img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="Bethel Fellowship Church, Fortuna, Missouri" fetchpriority="high"></div>
-{{ end }}{{ end }}
+{{ with site.GetPage "/gallery" }}{{ $g := . }}{{ $alts := dict }}{{ range .Params.images }}{{ $alts = merge $alts (dict .src .alt) }}{{ end }}
+<div class="car" role="region" aria-roledescription="carousel" aria-label="Photos of Bethel Fellowship Church">
+<div class="trk" tabindex="0">{{ range $k, $src := site.Params.homeSlides }}{{ with $g.Resources.GetMatch $src }}{{ $i := .Fill "1400x875 webp q80 Smart" }}
+<figure aria-roledescription="slide" aria-label="{{ add $k 1 }} of {{ len site.Params.homeSlides }}"><img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="{{ index $alts $src | default "Bethel Fellowship Church, Fortuna, Missouri" }}"{{ if eq $k 0 }} fetchpriority="high"{{ else }} loading="lazy"{{ end }}></figure>
+{{ end }}{{ end }}</div>
+<div class="cap"><div class="label">{{ site.Params.eyebrow }}</div><h1>{{ site.Title }}</h1></div>
+</div>
+{{ end }}
 <section class="now">
 <div>
 <div class="label">Latest sermon &middot; {{ $latest.Date.Format "January 2, 2006" }}</div>
