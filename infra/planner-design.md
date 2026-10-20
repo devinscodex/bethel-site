@@ -53,6 +53,8 @@ Slice 2, volunteer scheduling (tables designed now, built later):
 
 - Logins now: Devin only. Later: worship team and admin staff (Devin, Steve, Becky).
 - Calendar for real events (meetings, etc.) is in scope, alongside service plans.
+- Reminders: email first, text later.
+- Planning Center: Bethel has no account. We design our own data model and screens; Planning Center's public API docs and a free test org are reference only, no scraping and no copied code, text or branding.
 - Airtable export comes later; slice 1 waits on it for the real workflow.
 
 ## Calendar (slice 1b)
@@ -66,5 +68,4 @@ Slice 2, volunteer scheduling (tables designed now, built later):
 ## Open questions for Devin
 
 - Airtable: export each table to CSV and share one real service plan plus how it is used on a Sunday, so slice 1 matches the real workflow.
-- Reminders: email, text, or neither at first?
-- Planning Center: does Bethel already have an account? If so, reading its public API may beat rebuilding the data model.
+- Email sender: which address and mail service sends reminders (needs SPF/DKIM on the sending domain)?
