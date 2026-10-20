@@ -48,3 +48,8 @@ disableKinds = ["rss"]
   name = "Contact"
   pageRef = "/contact"
   weight = 50
+
+[imaging]
+  resampleFilter = "Lanczos"
+  quality = 85
+  anchor = "Smart"
