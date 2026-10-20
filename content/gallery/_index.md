@@ -24,6 +24,9 @@ images:
   - src: church-sign.jpg
     alt: "Our sign: Sunday School 9:30, Worship 10:30"
     group: "Outside"
+  - src: church-sign-at-sunset.jpg
+    alt: "Our sign at sunset, looking down the road"
+    group: "Outside"
   - src: sanctuary-from-the-balcony.jpg
     alt: "The sanctuary from the balcony"
     group: "Inside"
@@ -48,6 +51,9 @@ images:
   - src: balcony-window-sunrise.jpg
     alt: "Sunrise through the balcony window"
     group: "Inside"
+  - src: sanctuary-panorama.jpg
+    alt: "Panorama of the sanctuary from the balcony"
+    group: "Inside"
   - src: stained-glass.jpg
     anchor: "Bottom"
     alt: "Stained glass window"
@@ -61,6 +67,21 @@ images:
   - src: pew-and-cross.jpg
     alt: "A pew end with the cross behind"
     group: "Details"
+  - src: pews-low-angle.jpg
+    alt: "Carved pew ends and window light from floor level"
+    group: "Details"
+  - src: church-kitchen.jpg
+    alt: "The church kitchen"
+    group: "Around the church"
+  - src: childrens-reading-nook.jpg
+    alt: "A children's reading nook with books and crayons"
+    group: "Around the church"
+  - src: kids-room-bunks.jpg
+    alt: "The kids' room with bunk beds"
+    group: "Around the church"
+  - src: nursery-quiet-room.jpg
+    alt: "The nursery and quiet room"
+    group: "Around the church"
 description: "Photos of Bethel Fellowship Church in Fortuna, Missouri: the building, the grounds and the sanctuary."
 ---
 
