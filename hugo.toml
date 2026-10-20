@@ -18,7 +18,7 @@ disableKinds = ["rss"]
   email = "bethel.fec@gmail.com"
   sundaySchool = "9:30"
   worship = "10:30"
-  homeSlides = ["sanctuary-light.jpg", "church-front.jpg", "sunrise-over-the-church.jpg", "sanctuary-from-the-pulpit.jpg", "balcony-window-sunrise.jpg"]
+  homeSlides = ["homepage.jpg", "sunrise-over-the-church.jpg", "church-front.jpg", "communion-table.jpg", "balcony-window-sunrise.jpg"]
 
 [[menus.main]]
   name = "Sermons"
