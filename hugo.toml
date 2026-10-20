@@ -12,12 +12,13 @@ disableKinds = ["rss"]
 [params]
   mediaBase = "http://localhost:8099"
   eyebrow = "Fortuna, Missouri"
-  description = "Bethel Fellowship Church in Fortuna, Missouri. Sunday School 9:30 AM, Worship 10:30 AM. Listen to nearly 300 archived sermons, see the church, and plan your visit."
+  description = "Bethel Fellowship Church in Fortuna, Missouri. Sunday School 9:30 AM, Worship 10:30 AM. Listen to nearly 300 archived sermons and see the church."
   address = "37830 Bethel Church Rd., Fortuna, MO 65034"
   phone = "573-378-4878"
   email = "bethel.fec@gmail.com"
   sundaySchool = "9:30"
   worship = "10:30"
+  homeSlides = ["homepage.jpg", "sunrise-over-the-church.jpg", "church-front.jpg", "church-in-summer.jpg", "church-in-the-field.jpg", "sanctuary-from-the-pulpit.jpg", "cross-and-window.jpg", "communion-table.jpg"]
 
 [[menus.main]]
   name = "Sermons"
