@@ -52,6 +52,6 @@ Our service usually ends around 11:45. Most people stay and talk to one another 
 
 Sunday School begins at 9:30 and our Worship Service starts at 10:30
 
-Children’s Choir and Kids’ Klub meet on Wednesdays at 3:30pm during the school year
+Children’s Choir and Kids’ Klub meet on Mondays from 3:30 to 5:30 during the school year
 
 Youth Ministry meets on Wednesdays at 6:30pm

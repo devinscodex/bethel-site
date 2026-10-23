@@ -27,7 +27,3 @@ Free, open tools for worship and music. No sign-in needed.
 ## For the worship team
 
 - [Airtable](https://airtable.com/appqb2MdyX15N1DSB): service plans and scheduling. You need an account.
-
----
-
-This site was built by [Devin](https://github.com/devinscodex). [Change history](https://github.com/devinscodex/bethel-site/commits/main) lists every update to the site.
