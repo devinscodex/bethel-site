@@ -1,6 +1,5 @@
 <header><div class="wrap">
 <a class="brand" href="{{ "/" | relURL }}"><img class="mk mk-l" src="/brand/bethel-mark-black.svg" alt="" width="22" height="40"><img class="mk mk-d" src="/brand/bethel-mark-white.svg" alt="" width="22" height="40"><span>{{ site.Title }}</span></a>
 <nav>{{ $cur := . }}{{ range site.Menus.main }}<a href="{{ .URL }}"{{ if or ($cur.IsMenuCurrent "main" .) ($cur.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}
-<a href="/search/" class="srch" aria-label="Search">Search</a>
 <button class="tg" type="button" aria-label="Toggle light/dark" title="Toggle light/dark"></button></nav>
 </div></header>

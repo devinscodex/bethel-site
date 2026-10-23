@@ -3,7 +3,8 @@ title: "Visit"
 description: "What to expect at Bethel Fellowship Church in Fortuna, MO: Sunday School at 9:30 AM, worship at 10:30 AM, dress, children and nursery."
 ---
 
-Here’s what to expect at Bethel on a Sunday morning.
+We'd love to have you with us! Here's what a Sunday morning at Bethel is like.
+
 ## Sunday School
 
 We meet at 9:30 and have classes for all ages, including four adult options. This is where we study the Bible and get to know each other in smaller groups. For more information about Sunday School, email us:   bethel.fec@gmail.com

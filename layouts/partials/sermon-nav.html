@@ -1,0 +1,2 @@
+{{- /* Sermon views. Param: "all", "speaker" or "series" marks the current one. */ -}}
+<div class="st" role="group" aria-label="Sermon views"><a href="/sermons/"{{ if eq . "all" }} aria-current="page"{{ end }}>All sermons</a><a href="/speaker/"{{ if eq . "speaker" }} aria-current="page"{{ end }}>By speaker</a><a href="/series/"{{ if eq . "series" }} aria-current="page"{{ end }}>By series</a></div>

@@ -5,6 +5,10 @@ description: "Tools for Bethel Fellowship Church: a Bible reader and sign-in too
 
 Tools for our church family and ministry teams.
 
+## Search
+
+- [Search the site](/search/): find a sermon, a passage or a page.
+
 ## Bible
 
 - [Bible](/bible/): read the World English Bible with keyboard shortcuts, jump to any reference, and link straight to a verse.

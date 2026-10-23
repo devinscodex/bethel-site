@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $all := .Pages.ByDate.Reverse }}
 <h1>{{ .Title }}</h1>
-<p class="label"><a href="/series/">Browse by series</a> &nbsp;&middot;&nbsp; <a href="/speaker/">Browse by speaker</a></p>
+{{ partial "sermon-nav.html" "all" }}
 <form class="ctl meta" id="ctl">
 <input type="search" id="q" placeholder="Search title, speaker, series, passage" aria-label="Search sermons">
 <select id="speaker" aria-label="Speaker"><option value="">All speakers</option>{{ $last := slice }}{{ range site.Taxonomies.speaker.ByCount }}{{ if eq .Page.Title "Jerry Bush" }}{{ $last = $last | append . }}{{ else }}<option value="{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</option>{{ end }}{{ end }}{{ range $last }}<option value="{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</option>{{ end }}</select>
