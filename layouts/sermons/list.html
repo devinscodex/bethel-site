@@ -4,7 +4,7 @@
 <p class="label"><a href="/series/">Browse by series</a> &nbsp;&middot;&nbsp; <a href="/speaker/">Browse by speaker</a></p>
 <form class="ctl meta" id="ctl">
 <input type="search" id="q" placeholder="Search title, speaker, series, passage" aria-label="Search sermons">
-<select id="speaker" aria-label="Speaker"><option value="">All speakers</option>{{ range site.Taxonomies.speaker.ByCount }}<option value="{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</option>{{ end }}</select>
+<select id="speaker" aria-label="Speaker"><option value="">All speakers</option>{{ $last := slice }}{{ range site.Taxonomies.speaker.ByCount }}{{ if eq .Page.Title "Jerry Bush" }}{{ $last = $last | append . }}{{ else }}<option value="{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</option>{{ end }}{{ end }}{{ range $last }}<option value="{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</option>{{ end }}</select>
 <select id="series" aria-label="Series"><option value="">All series</option>{{ range site.Taxonomies.series.Alphabetical }}<option value="{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</option>{{ end }}</select>
 <select id="year" aria-label="Year"><option value="">All years</option>{{ range $all.GroupByDate "2006" "desc" }}<option value="{{ .Key }}">{{ .Key }} ({{ len .Pages }})</option>{{ end }}</select>
 <select id="sort" aria-label="Sort"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="title">Title A&ndash;Z</option><option value="speaker">Speaker A&ndash;Z</option></select>
