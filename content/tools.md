@@ -12,13 +12,21 @@ Tools for our church family and ministry teams.
 
 ## Music
 
-Open tools for worship and music. No sign-in needed.
+Free, open tools for worship and music. No sign-in needed.
+
+- [WorshipCommons](https://worshipcommons.org): free worship songs, charts and lyrics.
+- [Chordo](https://chordo.org): keep and transpose chord sheets.
+- [MuseScore](https://musescore.org): write and play sheet music.
+- [OpenLP](https://openlp.org): show lyrics and slides on a projector.
+- [FreeShow](https://freeshow.app): present lyrics, slides and video.
 
 ## Software
 
-- [Airtable](https://airtable.com/appqb2MdyX15N1DSB): service plans and scheduling for the worship team.
 - [ChurchApps](https://github.com/ChurchApps): open-source software for churches.
-- **Planner** (coming soon): our own service plans, teams and scheduling. Accounts are created by the church administrator.
+
+## For the worship team
+
+- [Airtable](https://airtable.com/appqb2MdyX15N1DSB): service plans and scheduling. You need an account.
 
 ---
 
