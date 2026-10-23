@@ -28,6 +28,15 @@ A caching proxy can show the old site for up to 10 minutes after a deploy.
     sketches/     design explorations, not part of the live site
     tools/        build.sh, deploy.sh, import_sermons.py, extract_notes.py
 
+## License
+
+The code (templates, CSS, JavaScript, scripts) is MIT, see `LICENSE`.
+
+Not covered by that license:
+- Photos, the logo and brand files, sermon audio, notes and transcripts belong to Bethel Fellowship Church. All rights reserved.
+- Bible text in `assets/bible/web/` is the World English Bible, public domain.
+- Fonts in `static/fonts/` are under the SIL Open Font License, see `static/fonts/OFL.txt`.
+
 ## Releases
 
 Tagged on trunk at real milestones, not every commit. Each tag carries its own description
