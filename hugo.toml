@@ -23,16 +23,16 @@ disableKinds = ["rss"]
   homeSlides = ["sunrise-over-the-church.jpg", "homepage.jpg", "church-front.jpg", "communion-table.jpg", "balcony-window-sunrise.jpg"]
 
 [[menus.main]]
-  name = "Visit"
-  pageRef = "/visit"
-  weight = 10
-[[menus.main]]
   name = "Sermons"
   pageRef = "/sermons"
+  weight = 10
+[[menus.main]]
+  name = "Visit"
+  pageRef = "/visit"
   weight = 20
 [[menus.main]]
-  name = "Gallery"
-  pageRef = "/gallery"
+  name = "Ministries"
+  pageRef = "/ministries"
   weight = 30
 [[menus.main]]
   name = "Tools"
