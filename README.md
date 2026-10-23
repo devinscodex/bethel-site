@@ -49,4 +49,5 @@ Tagged on trunk at real milestones, not every commit. Each tag carries its own d
 
 ## Open items
 
+- Bible reader: add a web view beside the terminal-style view (toggle between them), modeled on esv.org's reading layout. Licensed texts (ESV, NASB, NKJV) cannot be hosted; only public-domain texts ship in the repo.
 See `infra/README.md`'s Open items section.
