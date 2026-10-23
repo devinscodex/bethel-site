@@ -53,6 +53,16 @@ Built with the Isso comment server and removed at Steve's request. The code is k
 Removing it from the servers takes two commands that need sudo: `quill-isso-remove.sh` on quill, then copy
 `watchtower04-bethel.conf` over the live relay config (it no longer has the /comments/ routes).
 
+## Tool versions
+
+Hugo 0.168.0 extended, Pagefind 1.5.2. Neither is pinned by the build; install these versions to reproduce the site.
+
+## If Devin is unavailable
+
+Content lives in this repo; deploy with `tools/deploy.sh` (rsync to quill, relay caches pages 10 minutes).
+Servers: quill (static origin), watchtower04 (public relay), zekrom (media, Caddy :8097). All reachable over Tailscale
+only except the relay. Configs and where they install are listed above; everything is restored from the Fossil repo.
+
 ## Conventions
 
 - Plain commit messages, no tags or prefixes.
