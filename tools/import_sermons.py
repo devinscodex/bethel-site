@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Import the frozen WordPress REST archive into Hugo sermon pages.
 
-usage: import_sermons.py OUT_DIR [LIMIT]
+usage: SERMON_REST=/path/to/rest-json/ import_sermons.py OUT_DIR [LIMIT]
 Reads the archive read-only; writes content/sermons/<slug>.md (YAML front matter).
 """
 import html, json, os, re, sys, urllib.parse
 from datetime import datetime, timezone
 
-ARC = "/mnt/t/documents/bethel/website/archive/2026-10-15/rest-json/"
+ARC = os.environ["SERMON_REST"]
 out_dir = sys.argv[1]
 limit = int(sys.argv[2]) if len(sys.argv) > 2 else None
 os.makedirs(out_dir, exist_ok=True)
