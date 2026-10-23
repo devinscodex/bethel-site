@@ -19,3 +19,7 @@ Open tools for worship and music. No sign-in needed.
 - [Worship planner (Airtable sign in)](https://airtable.com/appqb2MdyX15N1DSB): service plans and scheduling for the worship team.
 - [ChurchApps](https://github.com/ChurchApps): open-source software for churches.
 - **Planner** (coming soon): our own service plans, teams and scheduling. Accounts are created by the church administrator.
+
+---
+
+This site was built by [Devin](https://github.com/devinscodex). [Change history](https://github.com/devinscodex/bethel-site/commits/main) lists every update to the site.
