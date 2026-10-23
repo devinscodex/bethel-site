@@ -24,6 +24,6 @@ Free, open tools for worship and music. No sign-in needed.
 
 - [ChurchApps](https://github.com/ChurchApps): open-source software for churches.
 
-## For the worship team
+## For members
 
-- [Airtable](https://airtable.com/appqb2MdyX15N1DSB): service plans and scheduling. You need an account.
+- [Airtable](https://airtable.com/appqb2MdyX15N1DSB): worship team service plans and scheduling.
