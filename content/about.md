@@ -1,6 +1,7 @@
 ---
 title: "About"
 description: "About Bethel Fellowship Church, a congregation in Fortuna, Missouri."
+sign: true
 ---
 
 Bethel Fellowship Church is a congregation in Fortuna, Missouri. Sunday School is at 9:30 AM and worship is at 10:30 AM. New here? Read [what to expect](/visit/).
