@@ -1,33 +1,30 @@
 ---
 title: "Tools"
-description: "Tools for Bethel Fellowship Church: a Bible reader and sign-in tools for ministry teams and volunteers."
+layout: "tools"
+description: "Tools for Bethel Fellowship Church: Bible readers, music tools and links for ministry teams."
 ---
-
-Tools for our church family and ministry teams.
 
 ## Bible
 
-- [ESV Bible online](https://www.esv.org/John+1/) (esv.org): read the English Standard Version, with search and passage lookup.
-- [Bible](/bible/): read the World English Bible with keyboard shortcuts, jump to any reference, and link straight to a verse.
+- [ESV Bible online](https://www.esv.org/John+1/): the English Standard Version.
+- [Bible](/bible/): our reader, World English Bible, with keys and verse links.
 
 ## Music
 
-Free, open tools for worship and music. No sign-in needed.
-
-- [WorshipCommons](https://worshipcommons.org): free worship songs, charts and lyrics.
+- [WorshipCommons](https://worshipcommons.org): free songs, charts and lyrics.
 - [Chordo](https://chordo.org): keep and transpose chord sheets.
 - [MuseScore](https://musescore.org): write and play sheet music.
-- [OpenLP](https://openlp.org): show lyrics and slides on a projector.
-- [FreeShow](https://freeshow.app): present lyrics, slides and video.
+- [OpenLP](https://openlp.org): lyrics and slides for a projector.
+- [FreeShow](https://freeshow.app): lyrics, slides and video.
 
 ## Software
 
-- [ChurchApps](https://github.com/ChurchApps): open-source software for churches.
+- [ChurchApps](https://github.com/ChurchApps): open-source church software.
 
 ## For members
 
-- [Airtable](https://airtable.com/appqb2MdyX15N1DSB): worship team service plans and scheduling.
+- [Airtable](https://airtable.com/appqb2MdyX15N1DSB): worship team plans and scheduling.
 
 ## Search
 
-- [Search the site](/search/): find a sermon, a passage or a page.
+- [Search the site](/search/): sermons, passages and pages.
