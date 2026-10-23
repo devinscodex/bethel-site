@@ -3,6 +3,10 @@ title: "About"
 description: "About Bethel Fellowship Church, a congregation in Fortuna, Missouri."
 ---
 
-Bethel Fellowship Church, Fortuna, Missouri.
+Bethel Fellowship Church is a congregation in Fortuna, Missouri. Sunday School is at 9:30 AM and worship is at 10:30 AM. New here? Read [what to expect](/visit/).
 
-_History of Bethel: to be written (the old page was empty)._
+## More about Bethel
+
+- [Ministries](/ministries/): Sunday School, Kids Klub, Youth, Music, Women in Mission and Providence Fellowship Center.
+- [Gallery](/gallery/): photos of our building and grounds.
+- [Contact](/contact/): address, phone and email.
