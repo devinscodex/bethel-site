@@ -1,0 +1,4 @@
+{{ define "main" }}<h1>{{ .Title }}</h1>
+{{ partial "sermon-nav.html" "speaker" }}
+<p class="meta">Everyone who has spoken at Bethel.</p>
+{{ partial "term-list.html" (dict "terms" .Data.Terms.Alphabetical "by" "n" "bottom" "Jerry Bush") }}{{ end }}

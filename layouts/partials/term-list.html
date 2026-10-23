@@ -1,0 +1,13 @@
+{{- /* Rows for a taxonomy index.
+   terms: the terms. by: "last" (newest first) or "n" (most sermons first).
+   sub: front matter field listed under each name (optional). bottom: term title shown last (optional). */ -}}
+{{ $sub := .sub }}{{ $bottom := .bottom }}
+{{ $rows := slice }}
+{{ range .terms }}
+  {{ $p := .Page.Pages.ByDate }}
+  {{ $s := slice }}{{ if $sub }}{{ range $p }}{{ range (index .Params $sub) }}{{ $s = $s | append . }}{{ end }}{{ end }}{{ end }}
+  {{ $a := (index $p 0).Date.Year }}{{ $z := (index $p.Reverse 0).Date.Year }}
+  {{ $rows = $rows | append (dict "page" .Page "last" (index $p.Reverse 0).Date "years" (cond (eq $a $z) (printf "%d" $a) (printf "%d to %d" $a $z)) "sub" (delimit ($s | uniq) ", ") "n" .Count "bottom" (and $bottom (eq .Page.Title $bottom) | default false)) }}
+{{ end }}
+{{ $rows = sort $rows .by "desc" }}
+<section class="list sr">{{ range $pass := slice false true }}{{ range where $rows "bottom" $pass }}<a class="row" href="{{ .page.RelPermalink }}"><span class="t">{{ .page.Title }}{{ with .sub }}<span class="pass meta">{{ . }}</span>{{ end }}</span><span class="meta r">{{ .n }} {{ if eq .n 1 }}sermon{{ else }}sermons{{ end }}<br>{{ .years }}</span></a>{{ end }}{{ end }}</section>
