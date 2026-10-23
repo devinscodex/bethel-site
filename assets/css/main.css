@@ -157,15 +157,17 @@ footer .tg:hover{opacity:1;color:var(--on);border-color:var(--on)}
 .list h2.label{margin:56px 0 14px}
 .row .t{font-size:clamp(21px,2.4vw,24px)}
 .row .meta{font-size:16px}
-.hello h1{font-size:clamp(26px,3.4vw,36px)}
+.hello h1{font-size:clamp(32px,4.6vw,48px)}
 .pl button{font-size:15px;height:44px;min-width:44px}
 .pl .sk,.pl .sp{font-size:15px}
 .pl .tm{font:16px var(--sans);color:var(--mute)}
 .pl .sb{height:6px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}.mk{height:40px;width:auto}.mk-l,[data-theme=light] .mk-d{display:none}[data-theme=light] .mk-l{display:block}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none}.mk{height:40px;width:auto}.mk-l,[data-theme=light] .mk-d{display:none}[data-theme=light] .mk-l{display:block}
 nav a[href="/visit/"]{color:var(--accent);border:1px solid var(--accent);padding:8px 14px;margin-left:20px}nav a[href="/visit/"]:hover{background:var(--accent);color:var(--on)}
 footer a{color:inherit}
-@media(max-width:760px){header .wrap{position:relative;gap:0;padding-top:10px;padding-bottom:6px}.brand{font-size:18px;gap:10px;padding-right:44px}.mk{height:32px}header .wrap>nav .tg,header .tg{position:absolute;top:12px;right:18px;margin:0}nav a,header .srch{letter-spacing:.06em;margin-right:14px;padding:13px 0}nav a[href="/visit/"]{padding:10px 12px;margin:0 12px 0 0}}
-@media(max-width:400px){.brand{font-size:16px;gap:8px}}
+@media(max-width:760px){header .wrap{position:relative;gap:0;padding-top:10px;padding-bottom:6px}.brand{font-size:18px;gap:7px;padding-right:44px}.mk{height:32px}header .wrap>nav .tg,header .tg{position:absolute;top:12px;right:18px;margin:0}nav a,header .srch{letter-spacing:.06em;margin-right:14px;padding:13px 0}nav a[href="/visit/"]{padding:10px 12px;margin:0 12px 0 0}}
+@media(max-width:400px){.brand{font-size:16px;gap:6px}}
 .sr .row{grid-template-columns:1fr auto;gap:20px}.sr .row .r{text-align:right}
+.hello .btn{margin-top:14px;font-size:15px;padding:14px 30px}
+@media(max-width:560px){.car img{aspect-ratio:3/2}.hello{padding-top:20px;padding-bottom:18px}}
 @media(min-width:861px) and (max-width:1100px){header .wrap{flex-wrap:nowrap}nav{gap:0 16px}nav a,header .srch{margin:0;letter-spacing:.08em}nav a[href="/visit/"]{padding:8px 12px}.tg{margin-left:0}.brand{font-size:19px}}
