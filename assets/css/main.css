@@ -172,5 +172,5 @@ footer a{color:inherit}
 .st{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 8px}.st a{font:15px/1 var(--sans);padding:15px 16px;border:1px solid var(--rule);text-decoration:none;color:var(--mute)}.st a:hover,.st a[aria-current]{color:var(--accent);border-color:var(--accent)}
 @media(max-width:560px){.car img{aspect-ratio:3/2}.hello{padding-top:20px;padding-bottom:18px}}
 @media(min-width:861px) and (max-width:1100px){header .wrap{flex-wrap:nowrap}nav{gap:0 16px}nav a,header .srch{margin:0;letter-spacing:.08em}nav a[href="/visit/"]{padding:8px 12px}.tg{margin-left:0}.brand{font-size:19px}}
-.ver{text-align:center;margin:4em 0 0}.ver a{display:inline-block;padding:14px 24px;font:13px var(--sans);color:var(--mute);opacity:.5;text-decoration:none}.ver a:hover,.ver a:focus-visible{opacity:1;text-decoration:underline}
+.ver{text-align:center;margin:4em 0 0;font:14px var(--sans);color:var(--mute);opacity:.6}.ver a{display:inline-block;padding:14px 10px;color:var(--mute);text-decoration:none}.ver:hover,.ver:focus-within{opacity:1}.ver a:hover,.ver a:focus-visible{opacity:1;text-decoration:underline}
 .tools{max-width:none;column-width:17rem;column-gap:3rem}.tools h2{margin-top:0;break-after:avoid}.tools ul{break-inside:avoid;margin:0 0 2em;padding-left:1.1em}.tools li{margin:.7em 0}
