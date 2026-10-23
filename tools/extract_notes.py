@@ -2,7 +2,7 @@
 """Extract summary, key takeaways and transcript from the sermon PDFs into data/notes/<slug>.json."""
 import glob, json, os, re, subprocess, sys
 
-ARCHIVE = "/mnt/t/documents/bethel/website/archive/2026-10-15/media"
+ARCHIVE = os.environ["SERMON_MEDIA"]  # folder with the sermon PDFs
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 END = re.compile(r"[.?!\"”')\]]$|\*\*$")
 
