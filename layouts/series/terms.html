@@ -1,0 +1,11 @@
+{{ define "main" }}<h1>{{ .Title }}</h1>
+<p class="meta">Teaching series, newest first. <a href="/sermons/">See every sermon</a></p>
+{{- /* Each row: years, series name with its speakers, sermon count. Sorted by the newest sermon in the series. */ -}}
+{{ $rows := slice }}
+{{ range .Data.Terms.Alphabetical }}
+  {{ $p := .Page.Pages.ByDate }}
+  {{ $sp := slice }}{{ range $p }}{{ range .Params.speaker }}{{ $sp = $sp | append . }}{{ end }}{{ end }}
+  {{ $a := (index $p 0).Date.Year }}{{ $b := (index $p.Reverse 0).Date.Year }}
+  {{ $rows = $rows | append (dict "page" .Page "last" (index $p.Reverse 0).Date "years" (cond (eq $a $b) (printf "%d" $a) (printf "%d to %d" $a $b)) "who" (delimit ($sp | uniq) ", ") "n" .Count) }}
+{{ end }}
+<section class="list sr">{{ range sort $rows "last" "desc" }}<a class="row" href="{{ .page.RelPermalink }}"><span class="t">{{ .page.Title }}{{ with .who }}<span class="pass meta">{{ . }}</span>{{ end }}</span><span class="meta r">{{ .n }} {{ if eq .n 1 }}sermon{{ else }}sermons{{ end }}<br>{{ .years }}</span></a>{{ end }}</section>{{ end }}
