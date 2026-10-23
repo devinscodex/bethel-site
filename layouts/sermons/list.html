@@ -3,15 +3,16 @@
 <h1>{{ .Title }}</h1>
 {{ partial "sermon-nav.html" "all" }}
 <form class="ctl meta" id="ctl">
-<input type="search" id="q" placeholder="Search title, speaker, series, passage" aria-label="Search sermons">
+<input type="search" id="q" placeholder="Search sermons: title, speaker, passage, topic" aria-label="Search sermons" autocomplete="off">
 <select id="speaker" aria-label="Speaker"><option value="">All speakers</option>{{ $last := slice }}{{ range site.Taxonomies.speaker.ByCount }}{{ if eq .Page.Title "Jerry Bush" }}{{ $last = $last | append . }}{{ else }}<option value="{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</option>{{ end }}{{ end }}{{ range $last }}<option value="{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</option>{{ end }}</select>
 <select id="series" aria-label="Series"><option value="">All series</option>{{ range site.Taxonomies.series.Alphabetical }}<option value="{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</option>{{ end }}</select>
 <select id="year" aria-label="Year"><option value="">All years</option>{{ range $all.GroupByDate "2006" "desc" }}<option value="{{ .Key }}">{{ .Key }} ({{ len .Pages }})</option>{{ end }}</select>
-<select id="sort" aria-label="Sort"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="title">Title A&ndash;Z</option><option value="speaker">Speaker A&ndash;Z</option></select>
-<label><input type="checkbox" id="notes"> Has notes</label>
-<button type="button" id="clr">Reset</button>
+<select id="sort" aria-label="Sort"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="title">Title A&ndash;Z</option><option value="speaker">Speaker A&ndash;Z</option><option value="series">Series A&ndash;Z</option></select>
+<label class="nt"><input type="checkbox" id="notes"> Has notes</label>
+<button type="button" id="clr" hidden>Clear filters</button>
 </form>
-<p class="meta" id="count">{{ len $all }} sermons</p>
-<section class="list" id="sl">{{ range $all }}{{ partial "sermon-item.html" . }}{{ end }}</section>
-<p class="meta" id="none" hidden>No sermons match. Try fewer filters.</p>
+<p class="meta" id="count" aria-live="polite">{{ len $all }} sermons</p>
+<table class="sx"><thead><tr><th scope="col"><button type="button" data-k="date">Date</button></th><th scope="col"><button type="button" data-k="title">Sermon</button></th><th scope="col"><button type="button" data-k="speaker">Speaker</button></th><th scope="col"><button type="button" data-k="series">Series</button></th></tr></thead>
+<tbody id="sl">{{ range $all }}{{ partial "sermon-row.html" . }}{{ end }}</tbody></table>
+<p class="meta" id="none" hidden>No sermons match. Try fewer words, or clear the filters.</p>
 {{ end }}

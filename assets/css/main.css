@@ -174,3 +174,13 @@ footer a{color:inherit}
 @media(min-width:861px) and (max-width:1100px){header .wrap{flex-wrap:nowrap}nav{gap:0 16px}nav a,header .srch{margin:0;letter-spacing:.08em}nav a[href="/visit/"]{padding:8px 12px}.tg{margin-left:0}.brand{font-size:19px}}
 .ver{text-align:center;margin:4em 0 0;font:14px var(--sans);color:var(--mute);opacity:.6}.ver a{display:inline-block;padding:14px 10px;color:var(--mute);text-decoration:none}.ver:hover,.ver:focus-within{opacity:1}.ver a:hover,.ver a:focus-visible{opacity:1;text-decoration:underline}
 .tools{max-width:none;column-width:17rem;column-gap:3rem}.tools h2{margin-top:0;break-after:avoid}.tools ul{break-inside:avoid;margin:0 0 2em;padding-left:1.1em}.tools li{margin:.7em 0}
+.sx{width:100%;border-collapse:collapse}.sx th{text-align:left;border-bottom:2px solid var(--rule);padding:0;position:sticky;top:0;background:var(--bg)}
+.sx th button{font:13px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);background:0;border:0;padding:12px 12px 12px 0;cursor:pointer;width:100%;text-align:left}
+.sx th button:hover,.sx th[aria-sort] button{color:var(--accent)}
+.sx th[aria-sort=ascending] button:after{content:" \2191"}.sx th[aria-sort=descending] button:after{content:" \2193"}
+.sx tbody tr{position:relative;border-bottom:1px solid var(--rule)}.sx tbody tr:hover{background:var(--tint)}.sx tr[hidden]{display:none}
+.sx td{padding:16px 12px 16px 0;vertical-align:top}.sx td.d{white-space:nowrap;width:1%}
+.sx td.t a{font-size:clamp(19px,2vw,22px);text-decoration:none;color:var(--ink)}.sx td.t a:after{content:"";position:absolute;inset:0}.sx tr:hover td.t a{color:var(--accent)}
+.sx .pass{display:block;margin-top:4px;font-size:15px}
+.ctl .nt{white-space:nowrap}.ctl input[type=search]{font-size:16px;padding:12px}.ctl select{font-size:15px;padding:10px}
+@media(max-width:760px){.sx thead{display:none}.sx,.sx tbody{display:block}.sx tbody tr{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;padding:14px 0}.sx td{padding:0}.sx td.d{width:auto;grid-row:1}.sx td.s{grid-row:1;grid-column:2}.sx td.t,.sx td.e{grid-column:1/-1}.sx td.e:empty,.sx td.s:empty{display:none}.ctl select{flex:1 1 44%;min-width:0}.ctl .nt{padding:10px 0}.ctl input[type=checkbox]{width:20px;height:20px;vertical-align:middle}.ctl button:not([hidden]){color:var(--accent);border-color:var(--accent)}}

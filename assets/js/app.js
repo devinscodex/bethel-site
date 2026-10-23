@@ -32,23 +32,28 @@ if(document.querySelector('#sl')){
 document.getElementById("ctl").addEventListener("submit",function(e){e.preventDefault()});
 (function(){
 var L=document.getElementById("sl"),rows=[].slice.call(L.children),g=function(i){return document.getElementById(i)},
-ids=["q","speaker","series","year","sort"];
+ids=["q","speaker","series","year","sort"],N=rows.length,hs=[].slice.call(document.querySelectorAll(".sx th button"));
 function has(r,k,v){return(r.dataset[k]||"").split("|").indexOf(v)>-1}
+function dd(A,B){return A.date<B.date?1:-1}
 function run(){
- var q=g("q").value.trim().toLowerCase(),sp=g("speaker").value,se=g("series").value,yr=g("year").value,nt=g("notes").checked,so=g("sort").value,n=0;
+ var w=g("q").value.trim().toLowerCase().split(/\s+/).filter(Boolean),sp=g("speaker").value,se=g("series").value,yr=g("year").value,nt=g("notes").checked,so=g("sort").value,n=0,f=w.length||sp||se||yr||nt;
  rows.sort(function(a,b){var A=a.dataset,B=b.dataset;
   if(so=="old")return A.date<B.date?-1:1;
   if(so=="title")return A.title.localeCompare(B.title);
-  if(so=="speaker")return A.speaker.localeCompare(B.speaker)||(A.date<B.date?1:-1);
-  return A.date<B.date?1:-1});
- rows.forEach(function(r){var d=r.dataset,ok=(!q||d.q.indexOf(q)>-1)&&(!sp||has(r,"speaker",sp))&&(!se||has(r,"series",se))&&(!yr||d.year==yr)&&(!nt||d.notes);
+  if(so=="speaker")return A.speaker.localeCompare(B.speaker)||dd(A,B);
+  if(so=="series")return(!A.series)-(!B.series)||A.series.localeCompare(B.series)||dd(A,B);
+  return dd(A,B)});
+ rows.forEach(function(r){var d=r.dataset,ok=w.every(function(x){return d.q.indexOf(x)>-1})&&(!sp||has(r,"speaker",sp))&&(!se||has(r,"series",se))&&(!yr||d.year==yr)&&(!nt||d.notes);
   r.hidden=!ok;if(ok)n++;L.appendChild(r)});
- g("count").textContent=n+(n==1?" sermon":" sermons");g("none").hidden=n>0;
+ g("count").textContent=f?n+" of "+N+" sermons":N+" sermons";g("none").hidden=n>0;g("clr").hidden=!f;
+ hs.forEach(function(b){var k=b.dataset.k,on=k=="date"?(so=="new"||so=="old"):so==k;if(on)b.parentNode.setAttribute("aria-sort",k=="date"?(so=="new"?"descending":"ascending"):"ascending");else b.parentNode.removeAttribute("aria-sort")});
  var p=new URLSearchParams();ids.forEach(function(i){if(g(i).value&&!(i=="sort"&&g(i).value=="new"))p.set(i,g(i).value)});
  if(nt)p.set("notes","1");
  history.replaceState(null,"",p.toString()?"#"+p:location.pathname)}
 ids.forEach(function(i){g(i).addEventListener("input",run)});g("notes").onchange=run;
-g("clr").onclick=function(){g("ctl").reset();run()};
+g("clr").onclick=function(){g("ctl").reset();run();g("q").focus()};
+hs.forEach(function(b){b.onclick=function(){var k=b.dataset.k,s=g("sort");s.value=k=="date"?(s.value=="new"?"old":"new"):k;run()}});
+document.addEventListener("keydown",function(e){var t=e.target.tagName;if(e.key=="/"&&t!="INPUT"&&t!="SELECT"&&t!="TEXTAREA"){e.preventDefault();g("q").focus()}});
 var h=new URLSearchParams(location.hash.slice(1));ids.forEach(function(i){if(h.get(i))g(i).value=h.get(i)});
 g("notes").checked=h.get("notes")=="1";run();
 })();

@@ -1,1 +1,8 @@
-<a class="row" href="{{ .RelPermalink }}"><span class="meta">{{ .Date.Format "Jan 2, 2006" }}</span><span class="t">{{ .Title }}</span><span class="meta">{{ with .Params.speaker }}{{ delimit . ", " }}{{ end }}</span></a>
+<tr class="item" data-date="{{ .Date.Format "2006-01-02" }}" data-title="{{ .Title }}" data-year="{{ .Date.Format "2006" }}"
+ data-speaker="{{ delimit (.Params.speaker | default slice) "|" }}" data-series="{{ delimit (.Params.series | default slice) "|" }}"
+ data-notes="{{ if .Params.notes_pdf }}1{{ end }}"
+ data-q="{{ lower (printf "%s %s %s %s %s" .Title (delimit (.Params.speaker | default slice) " ") (delimit (.Params.series | default slice) " ") (.Params.passage | default "") (.Params.summary | default "")) }}">
+<td class="d meta">{{ .Date.Format "Jan 2, 2006" }}</td>
+<td class="t"><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Params.passage }}<span class="pass meta">{{ . }}</span>{{ end }}</td>
+<td class="s meta">{{ delimit (.Params.speaker | default slice) ", " }}</td>
+<td class="e meta">{{ delimit (.Params.series | default slice) ", " }}</td></tr>
