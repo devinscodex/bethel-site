@@ -5,8 +5,6 @@ Hugo site, custom theme, no framework. Live at https://bethel.ravenscrest.xyz/.
 Bethel Fellowship Church, Fortuna, Missouri. Sunday School 9:30 AM, Worship 10:30 AM.
 Sermon archive (nearly 300), photo gallery, ministries, visit/contact info.
 
-Fossil is the source of truth. The GitHub copy is a mirror.
-
 ## Quick start
 
 Requires `hugo` and `pagefind` on PATH.
