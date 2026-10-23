@@ -12,7 +12,7 @@ hugo --minify --environment production --cleanDestinationDir
 pagefind --site public
 
 # List the files rsync sends, one path per line.
-changed=$(rsync -a --delete --out-format='%i %n' public/ "$TARGET" | sed -n 's/^>f[^ ]* //p')
+changed=$(rsync -a --delete --out-format='%i %n' public/ "$TARGET" | sed -n 's/^[<>]f[^ ]* //p')
 echo "$changed" | grep -c . | sed 's/$/ files changed/' || true
 
 # Fingerprinted CSS and JS get new names, so only pages and search files can be stale.
