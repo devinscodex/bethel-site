@@ -7,8 +7,8 @@ Tools for our church family and ministry teams.
 
 ## Bible
 
-- [Bible](/bible/): read the World English Bible with keyboard shortcuts, jump to any reference, and link straight to a verse.
 - [ESV Bible online](https://www.esv.org/John+1/) (esv.org): read the English Standard Version, with search and passage lookup.
+- [Bible](/bible/): read the World English Bible with keyboard shortcuts, jump to any reference, and link straight to a verse.
 
 ## Music
 
