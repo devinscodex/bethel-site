@@ -1,7 +1,8 @@
 ---
-title: "Tools"
-layout: "tools"
-description: "Tools for Bethel Fellowship Church: Bible readers, music tools and links for ministry teams."
+title: "Resources"
+layout: "resources"
+aliases: ["/tools/"]
+description: "Resources from Bethel Fellowship Church: Bible study links, music, church software and member links."
 ---
 
 ## Bible

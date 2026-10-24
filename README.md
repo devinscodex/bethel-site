@@ -19,7 +19,7 @@ A caching proxy can show old pages for up to 10 minutes after a deploy.
 
 ## Layout
 
-    content/      sermons, ministries, gallery, about, visit, contact, tools
+    content/      sermons, ministries, gallery, about, visit, contact, resources
     layouts/      theme templates (no external theme)
     assets/       CSS and JS source
     static/       served as-is: fonts, favicon, robots.txt

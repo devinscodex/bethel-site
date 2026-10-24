@@ -5,7 +5,7 @@ Versions match the release tags. Tags v1.0 to v1.3 are in Fossil. Version 1.3 wa
 ## 1.4 (in progress, not tagged yet)
 
 Look
-- Nav: Sermons, Visit, Ministries, Tools, About. Current page has a blue box, no bold. On phones only the logo (no word) and the five links show, on one row. The light/dark switch is on the Tools page. More space right of the logo and after About.
+- Nav: Sermons, Visit, Ministries, Resources, About. Current page has a blue box, no bold. On phones only the logo (no word) and the five links show, on one row. The light/dark switch is on the Tools page. More space right of the logo and after About.
 - Colors: Flexoki, light and dark, blue accent (was Catppuccin).
 - New logo mark in the header, and on the home page beside the church name. The header name is just "Bethel".
 - Tab icon: white arch and cross on black, bolder for small sizes, with versioned file names so browsers and the proxy fetch the new one.
@@ -31,9 +31,9 @@ About
 - Gallery banner, life together, contact details, Facebook, directions.
 - "changelog" link at the bottom (was a version number).
 
-Tools
+Resources (was Tools; /tools/ still redirects here)
 - Blue Letter Bible, ESV Bible online, music links, Airtable (members), search.
-- Music player on the Tools page. Plays video when a song has one, else audio. First playlist: This week. No playlist tabs or personal playlists for now.
+- Music player on the Resources page. Plays video when a song has one, else audio. First playlist: This week. No playlist tabs or personal playlists for now.
 - Display: a copy of the light/dark switch.
 - Own Bible reader removed.
 

@@ -172,7 +172,7 @@ footer a{color:inherit}
 @media(max-width:560px){.car img{aspect-ratio:3/2}.hello{padding-top:20px;padding-bottom:18px}}
 @media(min-width:861px) and (max-width:1100px){header .wrap{flex-wrap:nowrap}nav{gap:0 16px}nav a,header .srch{margin:0;letter-spacing:.08em}.tg{margin-left:0}.brand{font-size:19px}}
 .ver{text-align:center;margin:4em 0 0;font:14px var(--sans)}.ver a{display:inline-block;padding:14px 10px;color:var(--accent);text-decoration:underline}.ver:hover,.ver:focus-within{opacity:1}.ver a:hover,.ver a:focus-visible{opacity:1;text-decoration:underline}
-.tools{max-width:none;column-width:17rem;column-gap:3rem}.tools h2{margin-top:0;break-after:avoid}.tools ul{break-inside:avoid;margin:0 0 2em;padding-left:1.1em}.tools li{margin:.7em 0}
+.res{max-width:none;column-width:17rem;column-gap:3rem}.res h2{margin-top:0;break-after:avoid}.res ul{break-inside:avoid;margin:0 0 2em;padding-left:1.1em}.res li{margin:.7em 0}
 .sx{width:100%;border-collapse:collapse}.sx th{text-align:left;border-bottom:2px solid var(--rule);padding:0;position:sticky;top:0;background:var(--bg)}
 .sx th button{font:13px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);background:0;border:0;padding:12px 12px 12px 0;cursor:pointer;width:100%;text-align:left}
 .sx th button:hover,.sx th[aria-sort] button{color:var(--accent)}
@@ -220,3 +220,4 @@ footer a{color:inherit}
 .muw{column-span:all;margin:1em 0 1.5em}.muw h2{margin-top:0}.mu [hidden]{display:none}.mu .mpl{max-width:44rem}.mu .trk{max-width:44rem}
 .mu .trk a{padding:8px 0}.mu .add{min-height:44px}
 .mu .trk li.on a{color:var(--accent)}.mu .trk li.on::before{content:"\25B6";font-size:11px;color:var(--accent)}
+@media(max-width:400px){header .wrap>nav{margin-left:12px}nav a,header .srch{letter-spacing:0}}
