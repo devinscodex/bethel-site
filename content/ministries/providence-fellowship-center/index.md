@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Providence Fellowship Center"
 blurb: "Our building, open to the community"
 ---

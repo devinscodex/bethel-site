@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Youth Group"
 blurb: "Grades 7-12, Wednesdays"
 ---

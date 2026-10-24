@@ -4,7 +4,7 @@ layout: "visit"
 description: "Visit Bethel Fellowship Church in Fortuna, MO: Sunday School at 9:30 AM, worship at 10:30 AM, what to wear, children and nursery."
 ---
 
-We'd love to have you with us! Come as you are.
+Bethel Fellowship is truly a welcoming place. It doesn’t matter where you come from or what your background is; we want you to be part of us! We're a church focused on three simple things - reaching, teaching, and serving. We'd love to have you join us.
 
 ## Worship
 
