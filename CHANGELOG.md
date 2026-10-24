@@ -33,6 +33,7 @@ About
 
 Tools
 - Blue Letter Bible, ESV Bible online, music links, Airtable (members), search.
+- Display: a copy of the light/dark switch.
 - Own Bible reader removed.
 
 Other
