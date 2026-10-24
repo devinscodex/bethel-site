@@ -211,3 +211,4 @@ footer a{color:inherit}
 @media(max-width:760px){.brand span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.brand{gap:0}.mk{height:30px}nav a,header .srch{font-size:clamp(10px,3.3vw,13px);letter-spacing:.02em}}
 @media(max-width:760px){header .tg{display:none}header .wrap>nav{margin-left:8px}nav a,header .srch{font-size:clamp(10.5px,3.4vw,13px)}}
 .dsp{display:flex;align-items:center;gap:12px;margin:0}.dsp .tg{margin:0;flex:none}
+@media(max-width:760px){header .wrap>nav{margin-left:20px}.brand{margin-right:6px}}
