@@ -1,1 +1,1 @@
-{{ define "main" }}<h1>{{ .Title }}</h1><div class="prose">{{ partial "cover.html" . }}{{ .Content }}</div>{{ if .Params.sign }}<p class="ver"><a href="https://github.com/devinscodex">Built by Devin</a> &middot; <a href="{{ site.Params.changelog }}">v{{ site.Params.version }}</a></p>{{ end }}{{ end }}
+{{ define "main" }}<h1>{{ .Title }}</h1><div class="prose">{{ partial "cover.html" . }}{{ .Content }}</div>{{ if .Params.sign }}<p class="ver"><a href="{{ site.Params.changelog }}">v{{ site.Params.version }}</a></p>{{ end }}{{ end }}

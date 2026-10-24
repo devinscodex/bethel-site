@@ -31,7 +31,7 @@ A caching proxy can show the old site for up to 10 minutes after a deploy.
 What the site does and does not do with visitor data. Each point was checked against the code and the live server.
 
 - No analytics, advertising scripts, trackers or social widgets. Pages load only their own scripts, fonts and images.
-- Search and the Bible reader run in the visitor's browser. The search index is a static file.
+- Search runs in the visitor's browser. The search index is a static file.
 - One cookie, `bt`, remembers light or dark mode. There are no accounts and no forms that send data.
 - Links to Facebook, esv.org, Airtable and GitHub leave the site only when clicked.
 - Pages, sermon audio, notes and transcripts are served from servers we run. No CDN sits in front of them.
@@ -47,7 +47,6 @@ The code (templates, CSS, JavaScript, scripts) is MIT, see `LICENSE`.
 
 Not covered by that license:
 - Photos, the logo and brand files, sermon audio, notes and transcripts belong to Bethel Fellowship Church. All rights reserved.
-- Bible text in `assets/bible/web/` is the World English Bible, public domain.
 - Fonts in `static/fonts/` are under the SIL Open Font License, see `static/fonts/OFL.txt`.
 
 ## Releases
@@ -63,4 +62,3 @@ Tagged on trunk at real milestones, not every commit. Each tag carries its own d
 
 ## Open items
 
-- Bible reader: add a web view beside the terminal-style view, with a toggle. Licensed texts (ESV, NASB, NKJV) cannot be hosted; only public-domain texts ship in the repo.
