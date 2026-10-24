@@ -22,7 +22,7 @@
 </div>
 </section>
 <section class="list"><h2 class="label">Recent sermons</h2>
-{{ range first 4 (after 1 $sermons.ByDate.Reverse) }}{{ partial "sermon-row.html" . }}{{ end }}
+{{ range first 4 (after 1 $sermons.ByDate.Reverse) }}{{ partial "sermon-item.html" . }}{{ end }}
 <p style="margin-top:20px"><a href="/sermons/" class="label">All {{ len $sermons }} sermons</a></p></section>
 {{ with site.GetPage "/ministries" }}<section><h2 class="label" style="margin-top:44px">Life together</h2>
 <p class="meta">Ministries at Bethel. Choose one to read more.</p>
