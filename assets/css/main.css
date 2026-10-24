@@ -73,7 +73,7 @@ dialog#lb button{position:absolute;top:0;right:0;font-size:30px;line-height:1;ba
 footer{background:var(--green);color:var(--on);border-top:0;margin-top:6vh}
 footer .meta,footer a{color:var(--on)}
 .label{color:var(--green)}
-nav a:hover,nav a[aria-current]{color:var(--green)}nav a[aria-current]{font-weight:700;outline:1px solid var(--green);outline-offset:6px}
+nav a:hover,nav a[aria-current]{color:var(--green)}nav a[aria-current]{outline:1px solid var(--green);outline-offset:6px}
 .tg:hover{color:var(--green);border-color:var(--green)}
 .prose a{color:var(--green)}
 .ctl button:hover,.ctl input:focus,.ctl select:focus{border-color:var(--green);outline:0}
@@ -206,3 +206,4 @@ footer a{color:inherit}
 .car .dots{background:none}
 .gal img{aspect-ratio:3/1;max-height:240px;object-fit:cover;object-position:center 60%;border:1px solid var(--rule)}
 .grid.g2{grid-template-columns:repeat(2,1fr);max-width:52rem}@media(max-width:560px){.grid.g2{grid-template-columns:1fr}}
+@media(max-width:760px){header .wrap>nav{flex-wrap:nowrap;justify-content:space-between;width:100%}nav a,header .srch{font-size:clamp(11px,3.3vw,13px);letter-spacing:.02em;margin-right:0;white-space:nowrap}nav a[aria-current]{padding-left:6px;padding-right:6px;margin-left:-6px;margin-right:-6px}}

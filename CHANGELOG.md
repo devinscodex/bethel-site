@@ -1,14 +1,14 @@
 # Changelog
 
-Versions match the release tags. Tags v1.0 to v1.2 are in Fossil.
+Versions match the release tags. Tags v1.0 to v1.3 are in Fossil. Version 1.3 was tagged early, so this list covers everything since v1.2.
 
-## 1.3 (2026-10-23 to 2026-10-24)
+## 1.4 (in progress, not tagged yet)
 
 Look
+- Nav: Sermons, Visit, Ministries, Tools, About. Current page has a blue box, no bold. One line on phones.
 - Colors: Flexoki, light and dark, blue accent (was Catppuccin).
 - New logo mark in the header, and on the home page beside the church name. The header name is just "Bethel".
 - Type: larger labels and meta text, brighter muted text, bigger player controls.
-- Nav: Sermons, Visit, Ministries, Tools, About. The current page has a blue box.
 
 Home
 - Carousel: 7 slides, pause button, swipe, 44px controls, two stained glass views, hymnal.
@@ -28,7 +28,7 @@ Ministries
 
 About
 - Gallery banner, life together, contact details, Facebook, directions.
-- Version link at the bottom.
+- "changelog" link at the bottom (was a version number).
 
 Tools
 - Blue Letter Bible, ESV Bible online, music links, Airtable (members), search.
