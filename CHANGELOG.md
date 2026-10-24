@@ -1,21 +1,44 @@
 # Changelog
 
-Versions match the release tags.
+Versions match the release tags. Tags v1.0 to v1.2 are in Fossil.
 
-## 1.3 (2026-10-23)
+## 1.3 (2026-10-23 to 2026-10-24)
 
-- Colors: Flexoki, light and dark, blue accent.
-- Church mark in the header and the home page.
+Look
+- Colors: Flexoki, light and dark, blue accent (was Catppuccin).
+- New logo mark in the header, and on the home page beside the church name.
+- Type: larger labels and meta text, brighter muted text, bigger player controls.
 - Nav: Sermons, Visit, Ministries, Tools, About. The current page has a blue box.
-- Home: 7-slide carousel, sermon summary, 2 recent sermons.
-- Sermons: sortable table, search, speaker and series views.
-- Visit: times and address strip, short sections.
-- About: gallery banner, contact details, version link.
-- Ministries: 2x2 grid.
-- Tools: Blue Letter Bible, ESV, search, music links.
-- Own Bible reader removed.
+
+Home
+- Carousel: 7 slides, pause button, swipe, 44px controls, two stained glass views, hymnal.
+- Church name and times under the photos, with the mark.
+- Latest sermon with summary and player. Two recent sermons.
+
+Sermons
+- All sermons: sortable table, word search (title, speaker, series, passage, summary), clear button, `/` to search, filters kept in the address.
+- Speaker and series views with counts and years. Speakers: newest first.
 - Player: no back-15 button.
-- MIT license for the code.
+
+Visit
+- Times and address strip, directions link, welcome text, short sections.
+
+Ministries
+- Intro line and 2x2 grid. Youth and Providence hidden for now.
+
+About
+- Gallery banner, life together, contact details, Facebook, directions.
+- Version link at the bottom.
+
+Tools
+- Blue Letter Bible, ESV Bible online, music links, Airtable (members), search.
+- Own Bible reader removed.
+
+Other
+- Deploy script: reads settings from a config file, refetches changed pages.
+- Typo fixes (Galatians). Footer: address, phone and email only.
+- MIT license for the code. Font license added.
+- README: build, deploy, layout, privacy.
 
 ## 1.0 to 1.2 (2026-10-16 to 2026-10-17)
 
