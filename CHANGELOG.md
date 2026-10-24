@@ -5,7 +5,7 @@ Versions match the release tags. Tags v1.0 to v1.3 are in Fossil. Version 1.3 wa
 ## 1.4 (in progress, not tagged yet)
 
 Look
-- Nav: Sermons, Visit, Ministries, Tools, About. Current page has a blue box, no bold. On phones the logo, nav and toggle share one row.
+- Nav: Sermons, Visit, Ministries, Tools, About. Current page has a blue box, no bold. On phones only the logo (no word) and the five links show, on one row. The light/dark switch is in the footer.
 - Colors: Flexoki, light and dark, blue accent (was Catppuccin).
 - New logo mark in the header, and on the home page beside the church name. The header name is just "Bethel".
 - Tab icon: white arch and cross on black, bolder for small sizes, with versioned file names so browsers and the proxy fetch the new one.
