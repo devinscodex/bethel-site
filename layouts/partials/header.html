@@ -1,5 +1,5 @@
 <header><div class="wrap">
-<a class="brand" href="{{ "/" | relURL }}"><img class="mk mk-l" src="/brand/bethel-mark-black.svg" alt="" width="22" height="40"><img class="mk mk-d" src="/brand/bethel-mark-white.svg" alt="" width="22" height="40"><span>{{ site.Title }}</span></a>
+<a class="brand" href="{{ "/" | relURL }}"><img class="mk mk-l" src="/brand/bethel-mark-black.svg" alt="" width="22" height="40"><img class="mk mk-d" src="/brand/bethel-mark-white.svg" alt="" width="22" height="40"><span>{{ site.Params.shortName }}</span></a>
 <nav>{{ $cur := . }}{{ range site.Menus.main }}<a href="{{ .URL }}"{{ $sec := $cur.Section }}{{ if and (not $sec) $cur.File }}{{ $sec = $cur.File.ContentBaseName }}{{ end }}{{ $grp := dict "speaker" "Sermons" "series" "Sermons" "books" "Sermons" "topics" "Sermons" "gallery" "About" "contact" "About" }}{{ if or ($cur.IsMenuCurrent "main" .) ($cur.HasMenuCurrent "main" .) (eq (index $grp $sec) .Name) }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}
 <button class="tg" type="button" aria-label="Toggle light/dark" title="Toggle light/dark"></button></nav>
 </div></header>
