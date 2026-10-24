@@ -219,3 +219,4 @@ footer a{color:inherit}
 .mu h3.label{margin:0 0 4px}
 .muw{column-span:all;margin:1em 0 1.5em}.muw h2{margin-top:0}.mu [hidden]{display:none}.mu .mpl{max-width:44rem}.mu .trk{max-width:44rem}
 .mu .trk a{padding:8px 0}.mu .add{min-height:44px}
+.mu .trk li.on a{color:var(--accent)}.mu .trk li.on::before{content:"\25B6";font-size:11px;color:var(--accent)}
