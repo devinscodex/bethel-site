@@ -1,8 +1,0 @@
-{{ define "main" }}
-{{ $p := .Params }}
-<p class="label"><a href="/bible/">Bible</a> &middot; <a href="/bible/#{{ $p.bslug }}">{{ $p.book }}</a> &middot; World English Bible</p>
-<h1>{{ .Title }}</h1>
-<div class="prose bv">{{ range $i, $v := $p.verses }}{{ if $v }}<p id="v{{ add $i 1 }}"><sup>{{ add $i 1 }}</sup> {{ $v }}</p>{{ end }}{{ end }}</div>
-<nav class="bn meta" aria-label="Chapter navigation">{{ with $p.prev }}<a href="/bible/{{ . }}/" rel="prev">&larr; Previous</a>{{ end }}<a href="/bible/#{{ $p.bslug }}">All chapters</a>{{ with $p.next }}<a href="/bible/{{ . }}/" rel="next">Next &rarr;</a>{{ end }}</nav>
-<p class="meta">World English Bible, public domain.</p>
-{{ end }}
