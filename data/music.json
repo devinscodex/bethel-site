@@ -1,0 +1,65 @@
+{
+ "playlists": [
+  {
+   "id": "this-week",
+   "title": "This week",
+   "blurb": "Songs for this Sunday.",
+   "songs": [
+    {
+     "title": "This Is Amazing Grace",
+     "key": "Bb",
+     "audio": "/music/this-is-amazing-grace.mp3",
+     "video": "/music/this-is-amazing-grace.mp4"
+    },
+    {
+     "title": "As the Deer",
+     "key": "C",
+     "audio": "/music/as-the-deer.mp3",
+     "video": "/music/as-the-deer.mp4"
+    }
+   ]
+  },
+  {
+   "id": "worship",
+   "title": "Worship songs",
+   "blurb": "Songs we sing on Sundays.",
+   "songs": []
+  },
+  {
+   "id": "hymns",
+   "title": "Hymns",
+   "blurb": "Hymns of the faith.",
+   "songs": []
+  },
+  {
+   "id": "contemporary",
+   "title": "Contemporary",
+   "blurb": "Newer songs of praise.",
+   "songs": []
+  },
+  {
+   "id": "local",
+   "title": "Local talent",
+   "blurb": "Music from our own community.",
+   "songs": []
+  },
+  {
+   "id": "instrumental",
+   "title": "Instrumentals",
+   "blurb": "Music for quiet and for prayer.",
+   "songs": []
+  },
+  {
+   "id": "christmas",
+   "title": "Christmas",
+   "blurb": "Songs for Advent and Christmas.",
+   "songs": []
+  },
+  {
+   "id": "easter",
+   "title": "Easter",
+   "blurb": "Songs for Holy Week and Easter.",
+   "songs": []
+  }
+ ]
+}

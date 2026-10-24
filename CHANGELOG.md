@@ -33,6 +33,7 @@ About
 
 Tools
 - Blue Letter Bible, ESV Bible online, music links, Airtable (members), search.
+- Music player on the Tools page: playlists, audio by default, video when a song has one, "My playlist" kept in the browser. First playlist: This week.
 - Display: a copy of the light/dark switch.
 - Own Bible reader removed.
 
