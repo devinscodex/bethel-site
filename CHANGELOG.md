@@ -6,7 +6,7 @@ Versions match the release tags. Tags v1.0 to v1.2 are in Fossil.
 
 Look
 - Colors: Flexoki, light and dark, blue accent (was Catppuccin).
-- New logo mark in the header, and on the home page beside the church name.
+- New logo mark in the header, and on the home page beside the church name. The header name is just "Bethel".
 - Type: larger labels and meta text, brighter muted text, bigger player controls.
 - Nav: Sermons, Visit, Ministries, Tools, About. The current page has a blue box.
 
