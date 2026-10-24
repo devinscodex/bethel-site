@@ -1,4 +1,4 @@
-// Music player. Turns the song lists on /tools/ into one player.
+// Music player. Turns the song lists on /resources/ into one player.
 // Video plays when the song has one; audio-only songs use the audio player.
 (function () {
   var root = document.getElementById("mu");
