@@ -10,9 +10,9 @@
 {{- with site.GetPage "/gallery" }}{{ with .Resources.GetMatch "homepage.jpg" }}{{ $img = (.Fill "1200x630 jpg q85").Permalink }}{{ end }}{{ end -}}
 <meta name="description" content="{{ $desc }}">
 <link rel="canonical" href="{{ .Permalink }}">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+{{ with resources.Get "icons/favicon.svg" | fingerprint }}<link rel="icon" href="{{ .RelPermalink }}" type="image/svg+xml">{{ end }}
+{{ with resources.Get "icons/favicon.ico" | fingerprint }}<link rel="icon" href="{{ .RelPermalink }}" sizes="32x32">{{ end }}
+{{ with resources.Get "icons/apple-touch-icon.png" | fingerprint }}<link rel="apple-touch-icon" href="{{ .RelPermalink }}">{{ end }}
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
 <meta property="og:description" content="{{ $desc }}">
