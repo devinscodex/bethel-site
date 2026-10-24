@@ -20,8 +20,8 @@ disableKinds = ["rss"]
   worship = "10:30"
   version = "1.3"
   changelog = "https://github.com/devinscodex/bethel-church-site/blob/main/CHANGELOG.md"
-  homeFit = ["loaves-and-fishes.jpg", "stained-glass-top.jpg"]
-  homeSlides = ["sunrise-over-the-church.jpg", "homepage.jpg", "church-front.jpg", "loaves-and-fishes.jpg", "hymnal.jpg", "communion-table.jpg", "balcony-window-sunrise.jpg", "stained-glass-top.jpg"]
+  homeFit = ["stained-glass-top.jpg"]
+  homeSlides = ["sunrise-over-the-church.jpg", "stained-glass-top.jpg", "homepage.jpg", "church-front.jpg", "hymnal.jpg", "communion-table.jpg", "balcony-window-sunrise.jpg"]
 
 [[menus.main]]
   name = "Sermons"

@@ -1,4 +1,4 @@
 {{ define "main" }}<h1>{{ .Title }}</h1><div class="visit">
-<div class="at"><div><b>Sunday School</b><span>{{ site.Params.sundaySchool }} AM</span></div><div><b>Worship</b><span>{{ site.Params.worship }} AM</span><br><span class="meta">ends about 11:45</span></div><div><b>Find us</b><span>{{ replace site.Params.address "Church Rd." "Church&nbsp;Rd." | safeHTML }}</span><br><a href="https://www.google.com/maps/search/?api=1&amp;query={{ site.Params.address | urlquery }}">Directions</a></div><div><b>Questions</b><span>{{ site.Params.phone }}</span></div></div>
+<div class="at"><div><b>Sunday School</b><span>{{ site.Params.sundaySchool }} AM</span></div><div><b>Worship</b><span>{{ site.Params.worship }} AM</span></div><div><b>Find us</b><span>{{ replace site.Params.address "Church Rd." "Church&nbsp;Rd." | safeHTML }}</span><br><a href="https://www.google.com/maps/search/?api=1&amp;query={{ site.Params.address | urlquery }}">Directions</a></div></div>
 <div class="prose">{{ $p := split .Content "<h2" }}{{ index $p 0 | safeHTML }}</div>
 <div class="secs">{{ range after 1 $p }}{{ printf "<section><h2%s</section>" . | safeHTML }}{{ end }}</div></div>{{ end }}

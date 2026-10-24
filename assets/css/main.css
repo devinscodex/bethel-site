@@ -203,5 +203,6 @@ footer a{color:inherit}
 @media(max-width:560px){.hello .bn .mk{height:36px}}
 .visit>.prose{text-align:center;max-width:46em;margin:0 auto 2.4rem;font-size:1.15rem}
 .gal{display:block;position:relative;margin:0 0 2rem;max-width:var(--measure,46rem);text-decoration:none}.gal img{display:block;width:100%;height:auto}.gal span{position:absolute;left:0;right:0;bottom:0;padding:14px 18px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font:700 18px var(--sans);letter-spacing:.04em}.gal:hover span{text-decoration:underline}
-.car .dots{background:rgba(0,0,0,.5);padding:6px 12px;border-radius:20px;filter:none}
+.car .dots{background:none}
 .gal img{aspect-ratio:3/1;max-height:240px;object-fit:cover;object-position:center 60%;border:1px solid var(--rule)}
+.grid.g2{grid-template-columns:repeat(2,1fr);max-width:52rem}@media(max-width:560px){.grid.g2{grid-template-columns:1fr}}
