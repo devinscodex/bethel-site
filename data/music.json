@@ -16,6 +16,12 @@
      "key": "C",
      "audio": "/music/as-the-deer.mp3",
      "video": "/music/as-the-deer.mp4"
+    },
+    {
+     "title": "Praise the Lord Forever",
+     "key": "A",
+     "audio": "/music/praise-the-lord-forever.mp3",
+     "video": "/music/praise-the-lord-forever.mp4"
     }
    ]
   },
