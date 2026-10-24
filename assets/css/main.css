@@ -213,3 +213,9 @@ footer a{color:inherit}
 .dsp{display:flex;align-items:center;gap:12px;margin:0}.dsp .tg{margin:0;flex:none}
 @media(max-width:760px){header .wrap>nav{margin-left:20px}.brand{margin-right:6px}}
 @media(max-width:760px){header .wrap{padding-right:22px}}
+.mu{break-inside:avoid;margin:0 0 2em}.mu .ctl{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}.mu button{font:15px var(--sans);background:var(--panel);color:var(--ink);border:1px solid var(--rule);padding:10px 14px;min-height:44px;cursor:pointer}.mu button[aria-pressed=true]{color:var(--accent);border-color:var(--accent)}.mu button:hover{border-color:var(--accent)}
+.mu .mpl{margin:0 0 18px}.mu audio,.mu video{display:block;width:100%;margin:8px 0}.mu video{max-height:50vh;background:#000}
+.mu .trk{list-style:none;padding:0;margin:8px 0 0}.mu .trk li{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:8px 0;border-top:1px solid var(--rule)}.mu .trk a{font-size:19px;flex:1 1 12rem}.mu .add{font-size:13px;padding:6px 10px;min-height:36px}
+.mu h3.label{margin:0 0 4px}
+.muw{column-span:all;margin:1em 0 1.5em}.muw h2{margin-top:0}.mu [hidden]{display:none}.mu .mpl{max-width:44rem}.mu .trk{max-width:44rem}
+.mu .trk a{padding:8px 0}.mu .add{min-height:44px}

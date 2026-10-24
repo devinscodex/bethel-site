@@ -9,7 +9,7 @@ description: "Tools for Bethel Fellowship Church: Bible readers, music tools and
 - [Blue Letter Bible](https://www.blueletterbible.org/nlt/jhn/1/1/p1/rl1/s_998001): study tools, original languages and commentaries.
 - [ESV Bible online](https://www.esv.org/John+1/): the English Standard Version.
 
-## Music
+{{< music >}}
 
 ## Software
 

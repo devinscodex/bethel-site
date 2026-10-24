@@ -1,0 +1,9 @@
+{{- /* Playlists as plain link lists. music.js turns them into one player. */ -}}
+<div class="muw"><h2>Music</h2>
+<div id="mu" class="mu" data-base="{{ site.Params.mediaBase }}">
+{{ range hugo.Data.music.playlists }}{{ if .songs }}<section class="mp" id="{{ .id }}" data-title="{{ .title }}">
+<h3 class="label">{{ .title }}</h3><p class="meta">{{ .blurb }}</p>
+<ol class="trk">{{ range .songs }}<li data-a="{{ .audio }}"{{ with .video }} data-v="{{ . }}"{{ end }}><a href="{{ site.Params.mediaBase }}{{ .audio }}">{{ .title }}</a>{{ with .key }} <span class="meta">Key of {{ . }}</span>{{ end }}</li>{{ end }}</ol>
+
+</section>{{ end }}{{ end }}
+</div></div>{{ $js := resources.Get "js/music.js" | minify | fingerprint }}<script src="{{ $js.RelPermalink }}" defer></script>
