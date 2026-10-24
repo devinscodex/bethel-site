@@ -3,12 +3,13 @@
 {{ $latest := index $sermons.ByDate.Reverse 0 }}
 {{ with site.GetPage "/gallery" }}{{ $g := . }}{{ $alts := dict }}{{ range .Params.images }}{{ $alts = merge $alts (dict .src .alt) }}{{ end }}
 <div class="car" role="region" aria-roledescription="carousel" aria-label="Photos of Bethel Fellowship Church">
-<div class="trk" tabindex="0">{{ range $k, $src := site.Params.homeSlides }}{{ with $g.Resources.GetMatch $src }}{{ $w := math.Min 2000 .Width }}{{ $i := .Fill (printf "%dx%d webp q80 Smart" (int $w) (int (div (mul $w 5.0) 8))) }}
-<figure aria-roledescription="slide" aria-label="{{ add $k 1 }} of {{ len site.Params.homeSlides }}"><img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="{{ index $alts $src | default "Bethel Fellowship Church, Fortuna, Missouri" }}"{{ if eq $k 0 }} fetchpriority="high"{{ else if gt $k 1 }} loading="lazy"{{ end }}></figure>
+<div class="trk" tabindex="0">{{ range $k, $src := site.Params.homeSlides }}{{ with $g.Resources.GetMatch $src }}{{ $fit := in site.Params.homeFit $src }}{{ $w := math.Min 2000 .Width }}{{ $i := cond $fit (.Resize "1400x webp q80") (.Fill (printf "%dx%d webp q80 Smart" (int $w) (int (div (mul $w 5.0) 8)))) }}
+<figure{{ if $fit }} class="fit" style="--bg:url({{ $i.RelPermalink }})"{{ end }} aria-roledescription="slide" aria-label="{{ add $k 1 }} of {{ len site.Params.homeSlides }}"><img src="{{ $i.RelPermalink }}" width="{{ $i.Width }}" height="{{ $i.Height }}" alt="{{ index $alts $src | default "Bethel Fellowship Church, Fortuna, Missouri" }}"{{ if eq $k 0 }} fetchpriority="high"{{ else if gt $k 1 }} loading="lazy"{{ end }}></figure>
 {{ else }}{{ warnf "homeSlides: %s not found in gallery" $src }}{{ end }}{{ end }}</div>
 </div>
 {{ end }}
 <section class="hello">
+<img class="mk mk-l" src="/brand/bethel-mark-black.svg" alt="" width="22" height="40"><img class="mk mk-d" src="/brand/bethel-mark-white.svg" alt="" width="22" height="40">
 <h1>{{ site.Title }}</h1>
 <p class="when">Sunday School {{ site.Params.sundaySchool }} AM &middot; Worship {{ site.Params.worship }} AM</p>
 <p class="meta">{{ site.Params.address }}</p>
@@ -17,12 +18,13 @@
 <div>
 <div class="label">Latest sermon &middot; {{ $latest.Date.Format "January 2, 2006" }}</div>
 <h2><a href="{{ $latest.RelPermalink }}" style="text-decoration:none">{{ $latest.Title }}</a></h2>
-<div class="meta">{{ with $latest.Params.speaker }}{{ delimit . ", " }}{{ end }}</div>
+<div class="meta">{{ with $latest.Params.speaker }}{{ delimit . ", " }}{{ end }}{{ with $latest.Params.passage }} &middot; {{ . }}{{ end }}</div>
+{{ with $latest.Params.summary }}<p class="ex">{{ . | truncate 260 }}</p>{{ end }}
 {{ partial "player.html" $latest }}
 </div>
 </section>
 <section class="list"><h2 class="label">Recent sermons</h2>
-{{ range first 4 (after 1 $sermons.ByDate.Reverse) }}{{ partial "sermon-item.html" . }}{{ end }}
+{{ range first 2 (after 1 $sermons.ByDate.Reverse) }}{{ partial "sermon-item.html" . }}{{ end }}
 <p style="margin-top:20px"><a href="/sermons/" class="label">All {{ len $sermons }} sermons</a></p></section>
 {{ with site.GetPage "/ministries" }}<section><h2 class="label" style="margin-top:44px">Life together</h2>
 <p class="meta">Ministries at Bethel. Choose one to read more.</p>

@@ -9,4 +9,4 @@ Our youth try to do a service project every month. Typically this means going to
 
 Our teens have a heart for service as well as a heart for missions. They have done several mission projects and have plans to expand their reach soon!
 
-For more information about the Bethel Youth Group, please use the Contact Us tab.
+For more information about the Bethel Youth Group, please see our [contact details](/about/#contact).

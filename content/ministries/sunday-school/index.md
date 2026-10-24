@@ -9,4 +9,4 @@ We offer Sunday School for all ages, including adult classes. Sunday School faci
 
 Current Sunday School Superintendent: Karen Garber     Current Sunday School Assistant Superintendent: Megan Randall
 
-If you would like more information about a class that meets your family’s needs, please use the Contact Us tab.
+If you would like more information about a class that meets your family’s needs, please see our [contact details](/about/#contact).

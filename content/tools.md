@@ -8,15 +8,8 @@ description: "Tools for Bethel Fellowship Church: Bible readers, music tools and
 
 - [Blue Letter Bible](https://www.blueletterbible.org/nlt/jhn/1/1/p1/rl1/s_998001): study tools, original languages and commentaries.
 - [ESV Bible online](https://www.esv.org/John+1/): the English Standard Version.
-- [Bible](/bible/): our reader, World English Bible, with keys and verse links.
 
 ## Music
-
-- [WorshipCommons](https://worshipcommons.org): free songs, charts and lyrics.
-- [Chordo](https://chordo.org): keep and transpose chord sheets.
-- [MuseScore](https://musescore.org): write and play sheet music.
-- [OpenLP](https://openlp.org): lyrics and slides for a projector.
-- [FreeShow](https://freeshow.app): lyrics, slides and video.
 
 ## Software
 
