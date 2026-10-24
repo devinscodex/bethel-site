@@ -199,3 +199,9 @@ footer a{color:inherit}
 .car figure.fit img{position:relative;object-fit:contain}
 .car .dots,.car .pz{filter:drop-shadow(0 1px 3px rgba(0,0,0,.8))}
 .visit .secs{column-width:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(19rem,1fr));gap:1.8rem 3rem}.visit .secs section{margin:0}
+.hello .bn{display:flex;justify-content:center;align-items:center;gap:6px}.hello .bn .mk{margin:0;height:clamp(40px,5.2vw,56px)}.hello .bn h1{margin:0}
+@media(max-width:560px){.hello .bn .mk{height:36px}}
+.visit>.prose{text-align:center;max-width:46em;margin:0 auto 2.4rem;font-size:1.15rem}
+.gal{display:block;position:relative;margin:0 0 2rem;max-width:var(--measure,46rem);text-decoration:none}.gal img{display:block;width:100%;height:auto}.gal span{position:absolute;left:0;right:0;bottom:0;padding:14px 18px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font:700 18px var(--sans);letter-spacing:.04em}.gal:hover span{text-decoration:underline}
+.car .dots{background:rgba(0,0,0,.5);padding:6px 12px;border-radius:20px;filter:none}
+.gal img{aspect-ratio:3/1;max-height:240px;object-fit:cover;object-position:center 60%;border:1px solid var(--rule)}
