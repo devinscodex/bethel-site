@@ -8,6 +8,7 @@ Look
 - Nav: Sermons, Visit, Ministries, Tools, About. Current page has a blue box, no bold. One line on phones.
 - Colors: Flexoki, light and dark, blue accent (was Catppuccin).
 - New logo mark in the header, and on the home page beside the church name. The header name is just "Bethel".
+- Tab icon: the Bethel mark, larger, with versioned file names so browsers and the proxy fetch the new one.
 - Type: larger labels and meta text, brighter muted text, bigger player controls.
 
 Home
