@@ -11,6 +11,7 @@ disableKinds = ["rss"]
 
 [params]
   mediaBase = "http://localhost:8099"
+  # b1Url = "https://yourbethel.b1.church"   # uncomment once the church exists on B1 and is chosen; shows a Serving link on Resources
   shortName = "Bethel"
   eyebrow = "Fortuna, Missouri"
   description = "Bethel Fellowship Church in Fortuna, Missouri. Sunday School 9:30 AM, Worship 10:30 AM. Listen to nearly 300 archived sermons and see the church."
