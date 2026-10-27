@@ -1,9 +1,8 @@
 # Bethel Fellowship Church website
 
-A small, dependency-light Hugo site for Bethel Fellowship Church (Fortuna,
-Missouri): a sermon archive (audio, text and notes for roughly 300 sermons),
-ministries and visit information, and a members resources page. Own theme,
-no JS framework, static output only. Live: https://bethel.ravenscrest.xyz/
+A small, dependency-light Hugo site for Bethel Fellowship Church: ministries
+and visit information, and a members resources page. Own theme, no JS
+framework, static output only. Live: https://bethel.ravenscrest.xyz/
 
 ## Layout
 
@@ -17,7 +16,8 @@ no JS framework, static output only. Live: https://bethel.ravenscrest.xyz/
 
 ## Privacy
 
-- No analytics, ads, trackers, or social widgets.
+- No third-party analytics, ads, trackers or social widgets load in a visitor's browser.
+- An admin-only visitor-count report is built from server access logs every 10 minutes (bots and scanners excluded, addresses anonymized); it is not public and adds no script to any page.
 - Search runs in the browser from a static index.
 - One cookie (`bt`, light/dark mode). No accounts, no forms.
 - Outbound links (Facebook, esv.org, Blue Letter Bible, Airtable, GitHub) only load when clicked.
