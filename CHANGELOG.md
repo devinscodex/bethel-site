@@ -1,6 +1,7 @@
 # Changelog
 
-Versions match the release tags. Tags v1.0 to v1.3 are in Fossil. Version 1.3 was tagged early, so this list covers everything since v1.2.
+Versions match the release tags (v1.0-v1.3) in the project history. v1.3 was
+tagged early, so real work past it is grouped under 1.4 below.
 
 ## 1.4 (in progress, not tagged yet)
 
@@ -43,7 +44,32 @@ Other
 - Typo fixes (Galatians). Footer: address, phone and email only (no light/dark switch).
 - MIT license for the code. Font license added.
 - README: build, deploy, layout, privacy.
+- README trimmed for the public repo (dropped build/deploy commands and internal rules); privacy section tightened.
+- Removed infra/ (server names, addresses, hardening configs) from the repo; it stays in the private project history, not the public one.
 
-## 1.0 to 1.2 (2026-10-16 to 2026-10-17)
+## 1.3 (2026-10-23)
 
-First release: sermon archive with audio, notes and transcripts, photo gallery, ministries, Visit and Contact pages, search, light and dark mode.
+Tagged early; the bulk of real work past this point is in 1.4 above.
+- Nav: Sermons first, Visit, Ministries, Tools, About; current page highlighted; one-line phone header.
+- Tools page: Airtable (members), ESV Bible, Blue Letter Bible, open music tools, search.
+- Sermons: sortable table, word search including summaries, `/` to search.
+- Home, Visit, About: carousel, times strip and copy passes.
+- Added MIT license, font license, CHANGELOG.md.
+
+## 1.2 (2026-10-17)
+
+Comments and message board retired at request (code kept under the
+`comments-isso` tag, not deleted). Added a visitors-only traffic report
+with scanner bans. Sermon merges and photo/layout polish.
+
+## 1.1 (2026-10-16)
+
+Added visitor comments and a message board, admin moderation (notes
+publish immediately, admin deletes afterward), stricter admin password
+check.
+
+## 1.0 (2026-10-16)
+
+First complete site: sermon archive (296 imported sermons), light/dark
+Everforest theme, custom audio player with search, series/speaker/topic
+pages, mobile nav, gallery, strict-CSP-ready JS.
