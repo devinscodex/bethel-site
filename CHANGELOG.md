@@ -36,6 +36,7 @@ Resources (was Tools; /tools/ still redirects here)
 - Music player on the Resources page. Plays video when a song has one, else audio. First playlist: This week. No playlist tabs or personal playlists for now.
 - Display: a copy of the light/dark switch.
 - Own Bible reader removed.
+- Serving: scaffold added for a future volunteer sign-in/schedule link (commented out in hugo.toml, not live until a provider is chosen).
 
 Other
 - Deploy script: reads settings from a config file, refetches changed pages.
